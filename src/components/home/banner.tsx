@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import Navbar from './navbar';
+import Navbar from '../nav/navbar';
 
 const Banner = () => {
   return (

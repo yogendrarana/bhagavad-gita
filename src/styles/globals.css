@@ -13,9 +13,14 @@ body {
   height: 100%;
 }
 
+button {
+  outline: none;
+}
+
 :root {
   /* height */
   --h-nav: 80px;
+  --h-button: 40px;
 
   /* padding */
   --px: 150px;

@@ -4,9 +4,6 @@ import { Inter } from "next/font/google";
 // css
 import "@/styles/globals.css";
 
-// font
-const inter = Inter({ subsets: ["latin"] });
-
 // metadata
 export const metadata: Metadata = {
   title: "Bhagavad Gita",
@@ -16,8 +13,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main>
+      <body>
+        <main className="h-full">
           {children}
         </main>
       </body>
