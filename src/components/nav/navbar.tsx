@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '@/components/util/logo'
-import { ProfileDropdownMenu } from './profile-dropdown-menu'
+import { ProfileDropdownMenu } from './nav-dropdown-menu'
 import { Button } from '../ui/button'
 
 const Navbar = () => {

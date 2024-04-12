@@ -2,26 +2,24 @@ import {
     LogOut,
     Settings,
     User,
-    Equal
+    UserRound,
+    Equal,
+    LayoutDashboard,
+    CircleHelp
 } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuPortal,
     DropdownMenuSeparator,
-    DropdownMenuShortcut,
-    DropdownMenuSub,
-    DropdownMenuSubContent,
-    DropdownMenuSubTrigger,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
 export function ProfileDropdownMenu() {
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -30,28 +28,40 @@ export function ProfileDropdownMenu() {
                 </button>
             </DropdownMenuTrigger>
 
-            <DropdownMenuContent className="w-60">
-                <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuContent className="w-auto p-4 rounded-xl" sideOffset={10}>
+                <DropdownMenuLabel>Yogendra Rana</DropdownMenuLabel>
+                <DropdownMenuLabel className="text-gray-400">yogendrarana4321@gmail.com</DropdownMenuLabel>
                 <DropdownMenuSeparator />
+
                 <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                        <UserRound className="mr-2 h-4 w-4" />
+                        <span>Login</span>
+                    </DropdownMenuItem>
                     <DropdownMenuItem>
                         <User className="mr-2 h-4 w-4" />
                         <span>Profile</span>
-                        <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                     </DropdownMenuItem>
-
                     <DropdownMenuItem>
                         <Settings className="mr-2 h-4 w-4" />
                         <span>Settings</span>
-                        <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                     </DropdownMenuItem>
 
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
 
+                <DropdownMenuGroup>
+                    <DropdownMenuItem>
+                        <LayoutDashboard className="mr-2 h-4 w-4" />
+                        <span>Explore</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                        <CircleHelp className="mr-2 h-4 w-4" />
+                        <span>FAQ</span>
+                    </DropdownMenuItem>
+                </DropdownMenuGroup>
                 <DropdownMenuSeparator />
 
-                <DropdownMenuSeparator />
                 <DropdownMenuItem>
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Log out</span>
