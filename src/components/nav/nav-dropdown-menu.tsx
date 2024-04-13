@@ -25,11 +25,11 @@ export function ProfileDropdownMenu() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <button className="size-[var(--h-button)] rounded-full grid place-items-center border">
-                    {/* <Equal className="size-4 text-gray-500" /> */}
-                    <Avatar>
+                    <Equal className="size-4 text-gray-500" />
+                    {/* <Avatar>
                         <AvatarImage src="/avatars/01.png" alt="@shadcn" />
                         <AvatarFallback>YR</AvatarFallback>
-                    </Avatar>
+                    </Avatar> */}
                 </button>
             </DropdownMenuTrigger>
 
