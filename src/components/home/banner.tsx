@@ -1,8 +1,12 @@
+"use client";
+
 import React from 'react'
 
 // components
 import Navbar from '../nav/navbar';
+import { MotionButton } from '../ui/button';
 import { CustomSelect } from '../custom/custom-select';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Banner = () => {
   return (
@@ -17,7 +21,27 @@ const Banner = () => {
           </div>
         </div>
         <div className='flex-1'></div>
-        <div className='h-16'></div>
+        <div className='h-16 flex justify-center items-center'>
+          <div className='flex gap-2'>
+            <MotionButton 
+              size={"icon"}
+              variant={"secondary"} 
+              whileTap={{ scale: 0.75 }}
+              className='shadow-md'
+            >
+              <ChevronLeft size={18} />
+            </MotionButton>
+
+            <MotionButton 
+              size={"icon"}
+              variant={"secondary"} 
+              whileTap={{ scale: 0.75 }}
+              className='shadow-md'
+            >
+              <ChevronRight size={18} />
+            </MotionButton>
+          </div>
+        </div>
       </div>
     </div>
   )
