@@ -1,17 +1,23 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React from 'react'
 
 // components
+import Verse from '../gita/verse';
 import Navbar from '../nav/navbar';
 import { MotionButton } from '../ui/button';
 import { CustomSelect } from '../custom/custom-select';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 // data
-import { languages, LangType } from '@/config/languages';
+import { GITA_DATA } from '@/data/gita-data';
+import { languages } from '@/config/languages';
+
+// hooks
 import useActiveLanguage from '@/hooks/useActiveLanguage';
+
+// other
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Banner = () => {
   const { activeLanguage, changeActiveLanguage } = useActiveLanguage();
@@ -31,7 +37,9 @@ const Banner = () => {
         </div>
 
         {/* main body */}
-        <div className='flex-1'></div>
+        <div className='p-10 flex-1 flex justify-center items-center text-center'>
+          <Verse text={GITA_DATA[0].verses[0].text.nepali} />
+        </div>
 
         {/* footer */}
         <div className='p-4 flex justify-between items-center'>
