@@ -17,10 +17,10 @@ interface SelectOptionsProps {
 export function CustomSelect({ placeholderText }: SelectOptionsProps) {
     return (
         <Select>
-            <SelectTrigger className="w-[100px]">
+            <SelectTrigger className="w-[125px]">
                 <SelectValue placeholder={placeholderText} />
             </SelectTrigger>
-            <SelectContent className="w-[100px]">
+            <SelectContent className="w-[125px]">
                 <SelectGroup>
                     <SelectItem value="chapter1">Chapter 1</SelectItem>
                     <SelectItem value="chapter2">Chapter 2</SelectItem>
