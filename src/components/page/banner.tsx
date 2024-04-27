@@ -10,8 +10,10 @@ import CustomSelect from '../custom/custom-select';
 
 // other
 import useGita from '@/hooks/useGita';
+import useLanguage from '@/hooks/useLanguage';
 
 const Banner = () => {
+  const { activeLanguage } = useLanguage();
   const { currentChapter, currentVerse, next, prev } = useGita();
 
   return (
@@ -30,7 +32,7 @@ const Banner = () => {
 
         {/* main body */}
         <div className='p-10 flex-1 flex justify-center items-center text-center'>
-          <Verse currentChapter={currentChapter} currentVerse={currentVerse} />
+          <Verse currentChapter={currentChapter} currentVerse={currentVerse} activeLanguage={activeLanguage} />
         </div>
 
         {/* footer */}

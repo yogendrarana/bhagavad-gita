@@ -52,7 +52,6 @@ const useGita = () => {
         }
     }
 
-
     const skipToLast = () => {
         const lastChapter = GITA_DATA[GITA_DATA.length - 1]
         setCurrentChapter(lastChapter)

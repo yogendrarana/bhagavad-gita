@@ -4,9 +4,10 @@ import { ChapterType, VerseType } from '@/data/gita-data'
 type PropType = {
     currentChapter: ChapterType;
     currentVerse: VerseType;
+    activeLanguage: string;
 }
 
-const Verse: React.FC<PropType> = ({ currentChapter, currentVerse }) => {
+const Verse: React.FC<PropType> = ({ currentChapter, currentVerse, activeLanguage }) => {
     const [verse, setVerse] = useState<string>('');
 
     useEffect(() => {
@@ -16,7 +17,7 @@ const Verse: React.FC<PropType> = ({ currentChapter, currentVerse }) => {
 
     return (
         <div className='flex flex-col gap-4 text-2xl font-medium'>
-            <div>
+            <div className='flex flex-col'> 
                 {`Chapter ${currentChapter.chapter} - Verse ${currentVerse.verse}`}
             </div>
             <div>

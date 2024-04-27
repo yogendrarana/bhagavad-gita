@@ -21,6 +21,7 @@ const useLanguage = () => {
 
     return {
         activeLanguage,
+        setActiveLanguage,
         changeActiveLanguage,
     }
 }
