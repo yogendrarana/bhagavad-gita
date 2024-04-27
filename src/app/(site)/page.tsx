@@ -1,5 +1,5 @@
 // components
-import Banner from "@/components/home/banner";
+import Banner from "@/components/page/banner";
 
 export default function Home() {
   return (
