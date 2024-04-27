@@ -1,4 +1,23 @@
-export const GITA_DATA = [
+export type VerseType = {
+    verse: number;
+    text: {
+        english: string;
+        nepali: string;
+        hindi: string;
+        sanskrit: string;
+    };
+}
+
+export type ChapterType = {
+    chapter: number;
+    verses: VerseType[];
+}
+
+export type GitaDataType = ChapterType[];
+
+
+// data
+export const GITA_DATA: GitaDataType = [
     // Chapter 1
     {
         chapter: 1,

@@ -1,32 +1,17 @@
-import {
-    LogOut,
-    Settings,
-    User,
-    UserRound,
-    Equal,
-    LayoutDashboard,
-    CircleHelp,
-    Flag,
-    FlagIcon,
-    TicketCheck,
-    Check,
-    CalendarCheck,
-    Dot
-} from "lucide-react"
-
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
+import { Flag, Dot } from "lucide-react"
+import { 
+    DropdownMenu, 
+    DropdownMenuContent, 
+    DropdownMenuGroup, 
+    DropdownMenuItem, 
+    DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu"
-import { languages } from "@/config/languages"
 import { cn } from "@/lib/utils"
-import useActiveLanguage from "@/hooks/useActiveLanguage";
+import { languages } from "@/config/languages"
+import useLanguage from "@/hooks/useLanguage";
 
 export function LanguageDropdownMenu() {
-    const { activeLanguage, changeActiveLanguage } = useActiveLanguage();
+    const { activeLanguage, changeActiveLanguage } = useLanguage();
 
     return (
         <DropdownMenu>
@@ -42,10 +27,10 @@ export function LanguageDropdownMenu() {
                         languages.map((lang, index) => (
                             <DropdownMenuItem
                                 key={index}
-                                onClick={() => changeActiveLanguage(lang.code)}
+                                onClick={() => changeActiveLanguage(lang.name)}
                                 className="flex items-center gap-2 cursor-pointer"
                             >
-                                <Dot className={cn("h-2 w-2 rounded-full", activeLanguage === lang.code ? "bg-black" : "bg-gray-300")} />
+                                <Dot className={cn("h-2 w-2 rounded-full", activeLanguage === lang.name ? "bg-black" : "bg-gray-300")} />
                                 <span>{lang.name}</span>
                             </DropdownMenuItem>
                         ))

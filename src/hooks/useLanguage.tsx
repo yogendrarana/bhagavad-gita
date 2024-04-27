@@ -1,15 +1,15 @@
-import { languages } from '@/config/languages'
 import { useEffect, useState } from 'react'
+import { languages } from '@/config/languages'
 
-const useActiveLanguage = () => {
+const useLanguage = () => {
     const [activeLanguage, setActiveLanguage] = useState<string>('');
 
     useEffect(() => {
         const lang = localStorage.getItem('language');
         if (!lang) {
-            setActiveLanguage(languages[0].code);
-            localStorage.setItem('language', languages[0].code);
-        }else {
+            setActiveLanguage(languages[0].name);
+            localStorage.setItem('language', languages[0].name);
+        } else {
             setActiveLanguage(lang);
         }
     }, []);
@@ -25,4 +25,4 @@ const useActiveLanguage = () => {
     }
 }
 
-export default useActiveLanguage
+export default useLanguage

@@ -5,17 +5,15 @@ import React from 'react'
 // components
 import Verse from '../gita/verse';
 import Navbar from '../nav/navbar';
-import { MotionButton } from '../ui/button';
-import { CustomSelect } from '../custom/custom-select';
-
-// data
-import { GITA_DATA } from '@/data/gita-data';
+import Controllers from '../util/controllers';
+import CustomSelect from '../custom/custom-select';
 
 // other
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Controllers from '../util/controllers';
+import useGita from '@/hooks/useGita';
 
 const Banner = () => {
+  const { currentChapter, currentVerse, next, prev } = useGita();
+
   return (
     <div className='h-full'>
       <Navbar />
@@ -32,12 +30,12 @@ const Banner = () => {
 
         {/* main body */}
         <div className='p-10 flex-1 flex justify-center items-center text-center'>
-          <Verse text={GITA_DATA[0].verses[0].text.nepali} />
+          <Verse currentChapter={currentChapter} currentVerse={currentVerse} />
         </div>
 
         {/* footer */}
         <div className='p-4 flex justify-center items-center'>
-          <Controllers />
+          <Controllers next={next} prev={prev} />
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ interface SelectOptionsProps {
     placeholderText: string
 }
 
-export function CustomSelect({ placeholderText }: SelectOptionsProps) {
+export default function CustomSelect({ placeholderText }: SelectOptionsProps) {
     return (
         <Select>
             <SelectTrigger className="w-[125px]">

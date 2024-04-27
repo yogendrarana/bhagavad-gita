@@ -10,8 +10,8 @@ const Navbar = () => {
       <Logo />
       <div className='ml-auto flex gap-2'>
         <Button variant="secondary" className='h-[var(--h-button)] px-6 rounded-full'>Donate</Button>
-        <ProfileDropdownMenu />
         <LanguageDropdownMenu />
+        <ProfileDropdownMenu />
       </div>
     </div>
   )

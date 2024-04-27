@@ -1,3 +1,5 @@
+import { LANGUAGE, LANGUAGE_CODE } from "@/app/constants";
+
 export type LangType = {
     code: string;
     name: string;
@@ -5,19 +7,19 @@ export type LangType = {
 
 export const languages: LangType[] = [
     {
-        code: 'en',
-        name: 'English',
+        code: LANGUAGE_CODE.EN,
+        name: LANGUAGE.ENGLISH,
     },
     {
-        code: 'np',
-        name: 'Nepali',
+        code: LANGUAGE_CODE.NP,
+        name: LANGUAGE.NEPALI,
     },
     {
-        code: 'in',
-        name: 'Hindi',
+        code: LANGUAGE_CODE.HI,
+        name: LANGUAGE.HINDI,
     },
     {
-        code: 'sa',
-        name: 'Sanskrit',
+        code: LANGUAGE_CODE.SA,
+        name: LANGUAGE.SANSKRIT,
     },
 ]
