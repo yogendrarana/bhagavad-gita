@@ -8,6 +8,6 @@ export enum LANGUAGE {
 export enum LANGUAGE_CODE {
     EN = 'en',
     NP = 'ne',
-    HI = 'hi',
+    HI = 'in',
     SA = 'sa'
 }

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { LangType } from '@/config/languages';
 import { ChapterType, VerseType } from '@/data/gita-data'
 
 type PropType = {
     currentChapter: ChapterType;
     currentVerse: VerseType;
-    activeLanguage: string;
+    activeLanguage?: LangType;
 }
 
 const Verse: React.FC<PropType> = ({ currentChapter, currentVerse, activeLanguage }) => {
@@ -13,7 +14,7 @@ const Verse: React.FC<PropType> = ({ currentChapter, currentVerse, activeLanguag
     useEffect(() => {
         const lang = localStorage.getItem('language') || 'english';
         setVerse(currentVerse.text[lang as 'english' | 'nepali' | 'hindi' | 'sanskrit']);
-    }, [currentChapter, currentVerse])
+    }, [currentChapter, currentVerse, activeLanguage])
 
     return (
         <div className='flex flex-col gap-4 text-2xl font-medium'>
