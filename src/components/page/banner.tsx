@@ -6,7 +6,8 @@ import React from 'react'
 import Verse from '../gita/verse';
 import Navbar from '../nav/navbar';
 import Controllers from '../util/controllers';
-import CustomSelect from '../custom/custom-select';
+import SelectVerse from '../select/select-verse';
+import SelectChapter from '../select/select-chapter';
 
 // other
 import useGita from '@/hooks/useGita';
@@ -14,7 +15,7 @@ import useLanguage from '@/hooks/useLanguage';
 
 const Banner = () => {
   const { activeLanguage } = useLanguage();
-  const { currentChapter, currentVerse, nextVerse, prevVerse, nextChapter, prevChapter } = useGita();
+  const { currentChapter, currentVerse, nextVerse, prevVerse, nextChapter, prevChapter, selectChapter, selectVerse } = useGita();
 
   return (
     <div className='h-full'>
@@ -25,8 +26,8 @@ const Banner = () => {
         {/* header */}
         <div className='p-4 flex'>
           <div className='ml-auto flex gap-2'>
-            <CustomSelect placeholderText="Chapter" />
-            <CustomSelect placeholderText="Verse" />
+            <SelectChapter text="Chapter" selectChapter={selectChapter} />
+            <SelectVerse text="Verse" selectVerse={selectVerse} currentChapter={currentChapter} />
           </div>
         </div>
 

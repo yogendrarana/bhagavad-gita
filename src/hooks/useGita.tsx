@@ -127,22 +127,24 @@ const useGita = () => {
         }
     }
 
-    // skip to last
-    const skipToLast = () => {
-        const lastChapter = GITA_DATA[GITA_DATA.length - 1]
-        setCurrentChapter(lastChapter)
-        setCurrentVerse(lastChapter.verses[lastChapter.verses.length - 1])
-        localStorage.setItem('current_chapter', JSON.stringify(lastChapter.chapter))
-        localStorage.setItem('current_verse', JSON.stringify(1));
+    // select chapter
+    const selectChapter = (chapter: number) => {
+        const selectedChapter = GITA_DATA.find(ch => ch.chapter === chapter);
+        if (selectedChapter) {
+            setCurrentChapter(selectedChapter)
+            setCurrentVerse(selectedChapter.verses[0])
+            localStorage.setItem('current_chapter', JSON.stringify(selectedChapter.chapter))
+            localStorage.setItem('current_verse', JSON.stringify(1))
+        }
     }
 
-    // skip to first
-    const skipToFirst = () => {
-        const firstChapter = GITA_DATA[0]
-        setCurrentChapter(firstChapter)
-        setCurrentVerse(firstChapter.verses[0])
-        localStorage.setItem('current_chapter', JSON.stringify(firstChapter.chapter))
-        localStorage.setItem('current_verse', JSON.stringify(1));
+    // select verse
+    const selectVerse = (verse: number) => {
+        const selectedVerse = currentChapter.verses.find(v => v.verse === verse);
+        if (selectedVerse) {
+            setCurrentVerse(selectedVerse)
+            localStorage.setItem('current_verse', JSON.stringify(selectedVerse.verse))
+        }
     }
 
     return { 
@@ -152,6 +154,8 @@ const useGita = () => {
         prevVerse ,
         nextChapter,
         prevChapter,
+        selectChapter,
+        selectVerse
     };
 }
 
