@@ -112,9 +112,9 @@ const useGita = () => {
         if (currentChapter.chapter === 1) {
             const lastChapter = GITA_DATA[GITA_DATA.length - 1]
             setCurrentChapter(lastChapter)
-            setCurrentVerse(lastChapter.verses[lastChapter.verses.length - 1])
+            setCurrentVerse(lastChapter.verses[0])
             localStorage.setItem('current_chapter', JSON.stringify(lastChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(lastChapter.verses[lastChapter.verses.length - 1].verse))
+            localStorage.setItem('current_verse', JSON.stringify(1))
         }
 
         // else set chapter to previous
@@ -149,7 +149,9 @@ const useGita = () => {
         currentChapter, 
         currentVerse, 
         nextVerse, 
-        prevVerse 
+        prevVerse ,
+        nextChapter,
+        prevChapter,
     };
 }
 
