@@ -14,7 +14,7 @@ import useLanguage from '@/hooks/useLanguage';
 
 const Banner = () => {
   const { activeLanguage } = useLanguage();
-  const { currentChapter, currentVerse, next, prev } = useGita();
+  const { currentChapter, currentVerse, nextVerse, prevVerse } = useGita();
 
   return (
     <div className='h-full'>
@@ -37,7 +37,7 @@ const Banner = () => {
 
         {/* footer */}
         <div className='p-4 flex justify-center items-center'>
-          <Controllers next={next} prev={prev} />
+          <Controllers nextVerse={nextVerse} prevVerse={prevVerse} />
         </div>
       </div>
     </div>
