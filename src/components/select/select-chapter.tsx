@@ -10,25 +10,22 @@ import {
 } from "@/components/ui/select"
 
 import { GITA_DATA } from "@/data/gita-data"
+import { useGitaStore } from "@/state/useGitaStore";
 
-// prop type
-interface PropType {
-    text: string;
-    selectChapter: (chapter: number) => void;
-}
 
-export default function SelectChapter({ text, selectChapter }: PropType) {
+export default function SelectChapter() {
+    const { selectGitaChapter } = useGitaStore();
     const chapters = GITA_DATA.map(chapter => chapter.chapter)
 
     const handleChange = (value: string) => {
         const chapter = parseInt(value)
-        selectChapter(chapter)
+        selectGitaChapter(chapter)
     }
 
     return (
         <Select onValueChange={handleChange}>
             <SelectTrigger className="w-[125px]">
-                <SelectValue placeholder={text} />
+                <SelectValue placeholder={"Chapters"} />
             </SelectTrigger>
             <SelectContent className="w-[125px]">
                 <SelectGroup>

@@ -1,26 +1,20 @@
 import { useEffect, useState } from 'react'
-import { LangType } from '@/config/languages';
-import { ChapterType, VerseType } from '@/data/gita-data'
+import { useGitaStore } from '@/state/useGitaStore';
 
-type PropType = {
-    currentChapter: ChapterType;
-    currentVerse: VerseType;
-    activeLanguage?: LangType;
-}
-
-const Verse: React.FC<PropType> = ({ currentChapter, currentVerse, activeLanguage }) => {
+const Verse: React.FC = () => {
     const [verse, setVerse] = useState<string>('');
+    const { currentGitaVerse, currentGitaChapter } = useGitaStore();
 
     useEffect(() => {
         const lang = localStorage.getItem('language') || 'english';
-        setVerse(currentVerse.text[lang as 'english' | 'nepali' | 'hindi' | 'sanskrit']);
-    }, [currentChapter, currentVerse, activeLanguage])
+        setVerse(currentGitaVerse.text[lang as 'english' | 'nepali' | 'hindi' | 'sanskrit']);
+    }, [currentGitaChapter, currentGitaVerse])
 
     return (
         <div className='flex flex-col gap-2 text-2xl font-medium'>
             <div className='text-2xl'>Bhagavad Gita</div>
-            <div className='flex flex-col text-lg text-gray-400'> 
-                {`Chapter ${currentChapter.chapter}, Verse ${currentVerse.verse}`}
+            <div className='flex flex-col text-lg text-gray-400'>
+                {`Chapter ${currentGitaChapter.chapter}, Verse ${currentGitaVerse.verse}`}
             </div>
             <div className='mt-10'>
                 {verse}

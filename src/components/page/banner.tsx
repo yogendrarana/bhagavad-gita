@@ -9,14 +9,8 @@ import Controllers from '../util/controllers';
 import SelectVerse from '../select/select-verse';
 import SelectChapter from '../select/select-chapter';
 
-// other
-import useGita from '@/hooks/useGita';
-import useLanguage from '@/hooks/useLanguage';
 
 const Banner = () => {
-  const { activeLanguage } = useLanguage();
-  const { currentChapter, currentVerse, nextVerse, prevVerse, nextChapter, prevChapter, selectChapter, selectVerse } = useGita();
-
   return (
     <div className='h-full'>
       <Navbar />
@@ -26,19 +20,19 @@ const Banner = () => {
         {/* header */}
         <div className='p-4 flex'>
           <div className='ml-auto flex gap-2'>
-            <SelectChapter text="Chapter" selectChapter={selectChapter} />
-            <SelectVerse text="Verse" selectVerse={selectVerse} currentChapter={currentChapter} />
+            <SelectChapter />
+            <SelectVerse />
           </div>
         </div>
 
         {/* main body */}
         <div className='p-10 flex flex-1 justify-center items-center text-center'>
-          <Verse currentChapter={currentChapter} currentVerse={currentVerse} activeLanguage={activeLanguage} />
+          <Verse />
         </div>
 
         {/* footer */}
         <div className='p-4 flex justify-center items-center'>
-          <Controllers nextVerse={nextVerse} prevVerse={prevVerse} nextChapter={nextChapter} prevChapter={prevChapter} />
+          <Controllers />
         </div>
       </div>
     </div>
