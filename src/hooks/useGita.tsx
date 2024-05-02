@@ -7,21 +7,21 @@ const useGita = () => {
 
     // use effect
     useEffect(() => {
-        const currentChapterNumber = localStorage.getItem('current_chapter');
-        const currentVerseNumber = localStorage.getItem('current_verse');
+        const currentChapterNumber = localStorage.getItem('current_gita_chapter');
+        const currentVerseNumber = localStorage.getItem('current_gita_verse');
 
         if (currentChapterNumber) {
             setCurrentChapter(GITA_DATA.find(chap => chap.chapter === JSON.parse(currentChapterNumber)) || GITA_DATA[0])
         }else {
             setCurrentChapter(GITA_DATA[0])
-            localStorage.setItem('current_chapter', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(1))
         }
 
         if (currentVerseNumber) {
             setCurrentVerse(currentChapter.verses.find(verse => verse.verse === JSON.parse(currentVerseNumber)) || currentChapter.verses[0])
         }else {
             setCurrentVerse(currentChapter.verses[0])
-            localStorage.setItem('current_verse', JSON.stringify(1))            
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))            
         }
     }, [])
 
@@ -32,8 +32,8 @@ const useGita = () => {
         if (currentChapter.chapter === GITA_DATA.length && currentVerse.verse === currentChapter.verses.length) {
             setCurrentChapter(GITA_DATA[0])
             setCurrentVerse(GITA_DATA[0].verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(1))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(1))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
 
         // if the verse is last verse of the chapter set the chapter to next chapter
@@ -42,8 +42,8 @@ const useGita = () => {
             if (nextChapter) {
                 setCurrentChapter(nextChapter)
                 setCurrentVerse(nextChapter.verses[0])
-                localStorage.setItem('current_chapter', JSON.stringify(nextChapter.chapter))
-                localStorage.setItem('current_verse', JSON.stringify(1))
+                localStorage.setItem('current_gita_chapter', JSON.stringify(nextChapter.chapter))
+                localStorage.setItem('current_gita_verse', JSON.stringify(1))
             }
         }
 
@@ -51,7 +51,7 @@ const useGita = () => {
         const nextVerse = currentChapter.verses.find(verse => verse.verse === currentVerse.verse + 1)
         if (nextVerse) {
             setCurrentVerse(nextVerse)
-            localStorage.setItem('current_verse', JSON.stringify(nextVerse.verse))
+            localStorage.setItem('current_gita_verse', JSON.stringify(nextVerse.verse))
         }
     }
 
@@ -62,8 +62,8 @@ const useGita = () => {
             const lastChapter = GITA_DATA[GITA_DATA.length - 1]
             setCurrentChapter(lastChapter)
             setCurrentVerse(lastChapter.verses[lastChapter.verses.length - 1])
-            localStorage.setItem('current_chapter', JSON.stringify(lastChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(lastChapter.verses[lastChapter.verses.length - 1].verse))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(lastChapter.chapter))
+            localStorage.setItem('current_gita_verse', JSON.stringify(lastChapter.verses[lastChapter.verses.length - 1].verse))
         }
 
         // if the verse is first verse of the chapter set the chapter to previous chapter, last verse
@@ -72,8 +72,8 @@ const useGita = () => {
             if (prevChapter) {
                 setCurrentChapter(prevChapter)
                 setCurrentVerse(prevChapter.verses[prevChapter.verses.length - 1])
-                localStorage.setItem('current_chapter', JSON.stringify(prevChapter.chapter))
-                localStorage.setItem('current_verse', JSON.stringify(prevChapter.verses[prevChapter.verses.length - 1].verse))
+                localStorage.setItem('current_gita_chapter', JSON.stringify(prevChapter.chapter))
+                localStorage.setItem('current_gita_verse', JSON.stringify(prevChapter.verses[prevChapter.verses.length - 1].verse))
             }
         }
 
@@ -81,7 +81,7 @@ const useGita = () => {
         const prevVerse = currentChapter.verses.find(verse => verse.verse === currentVerse.verse - 1)
         if (prevVerse) {
             setCurrentVerse(prevVerse)
-            localStorage.setItem('current_verse', JSON.stringify(prevVerse.verse))
+            localStorage.setItem('current_gita_verse', JSON.stringify(prevVerse.verse))
         }
     }
 
@@ -91,8 +91,8 @@ const useGita = () => {
         if (currentChapter.chapter === GITA_DATA.length) {
             setCurrentChapter(GITA_DATA[0]);
             setCurrentVerse(GITA_DATA[0].verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(1))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(1))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
 
         // else set chapter to next
@@ -100,8 +100,8 @@ const useGita = () => {
         if (nextChapter) {
             setCurrentChapter(nextChapter)
             setCurrentVerse(nextChapter.verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(nextChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(nextChapter.chapter))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
     }
 
@@ -113,8 +113,8 @@ const useGita = () => {
             const lastChapter = GITA_DATA[GITA_DATA.length - 1]
             setCurrentChapter(lastChapter)
             setCurrentVerse(lastChapter.verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(lastChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(lastChapter.chapter))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
 
         // else set chapter to previous
@@ -122,8 +122,8 @@ const useGita = () => {
         if (prevChapter) {
             setCurrentChapter(prevChapter)
             setCurrentVerse(prevChapter.verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(prevChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(prevChapter.chapter))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
     }
 
@@ -133,8 +133,8 @@ const useGita = () => {
         if (selectedChapter) {
             setCurrentChapter(selectedChapter)
             setCurrentVerse(selectedChapter.verses[0])
-            localStorage.setItem('current_chapter', JSON.stringify(selectedChapter.chapter))
-            localStorage.setItem('current_verse', JSON.stringify(1))
+            localStorage.setItem('current_gita_chapter', JSON.stringify(selectedChapter.chapter))
+            localStorage.setItem('current_gita_verse', JSON.stringify(1))
         }
     }
 
@@ -143,7 +143,7 @@ const useGita = () => {
         const selectedVerse = currentChapter.verses.find(v => v.verse === verse);
         if (selectedVerse) {
             setCurrentVerse(selectedVerse)
-            localStorage.setItem('current_verse', JSON.stringify(selectedVerse.verse))
+            localStorage.setItem('current_gita_verse', JSON.stringify(selectedVerse.verse))
         }
     }
 

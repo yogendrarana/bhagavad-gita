@@ -17,11 +17,12 @@ const Verse: React.FC<PropType> = ({ currentChapter, currentVerse, activeLanguag
     }, [currentChapter, currentVerse, activeLanguage])
 
     return (
-        <div className='flex flex-col gap-4 text-2xl font-medium'>
-            <div className='flex flex-col'> 
-                {`Chapter ${currentChapter.chapter} - Verse ${currentVerse.verse}`}
+        <div className='flex flex-col gap-2 text-2xl font-medium'>
+            <div className='text-2xl'>Bhagavad Gita</div>
+            <div className='flex flex-col text-lg text-gray-400'> 
+                {`Chapter ${currentChapter.chapter}, Verse ${currentVerse.verse}`}
             </div>
-            <div>
+            <div className='mt-10'>
                 {verse}
             </div>
         </div>

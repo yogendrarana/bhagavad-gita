@@ -24,6 +24,7 @@ export default function SelectVerse({ text, currentChapter, selectVerse }: PropT
         const verse = parseInt(value)
         selectVerse(verse)
     }
+    
     return (
         <Select onValueChange={handleVerseChange}>
             <SelectTrigger className="w-[125px]">

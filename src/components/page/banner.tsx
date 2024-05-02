@@ -32,7 +32,7 @@ const Banner = () => {
         </div>
 
         {/* main body */}
-        <div className='p-10 flex-1 flex justify-center items-center text-center'>
+        <div className='p-10 flex flex-1 justify-center items-center text-center'>
           <Verse currentChapter={currentChapter} currentVerse={currentVerse} activeLanguage={activeLanguage} />
         </div>
 
