@@ -1,7 +1,11 @@
 import * as React from "react"
-import { useGitaStore } from "@/state/useGitaStore";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
+import { Check } from "lucide-react";
 
+// data and store
+import { useGitaStore } from "@/state/useGitaStore";
+
+// components
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
 
 export default function SelectVerse() {
     const { currentGitaChapter, selectGitaVerse, currentGitaVerse } = useGitaStore()
@@ -22,7 +26,12 @@ export default function SelectVerse() {
                             <DropdownMenuItem
                                 key={index}
                                 onClick={() => selectGitaVerse(verse)}
-                            >Verse {verse}</DropdownMenuItem>
+                            >
+                                {currentGitaVerse.verse === verse ?
+                                    <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
+                                }
+                                <span>Verse {verse}</span>
+                            </DropdownMenuItem>
                         ))
                     }
                 </DropdownMenuGroup>

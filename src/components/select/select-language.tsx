@@ -1,14 +1,12 @@
-import { Flag, Dot, ChevronDown } from "lucide-react"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
+import { Dot, ChevronDown } from "lucide-react"
+
+// data and store
 import { languages } from "@/config/languages"
 import { useLanguageStore } from "@/state/useLanguageStore";
+
+// components
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export function SelectLanguage() {
     const { activeLanguage, setActiveLanguage } = useLanguageStore();
@@ -22,7 +20,7 @@ export function SelectLanguage() {
                 </button>
             </DropdownMenuTrigger>
 
-            <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
+            <DropdownMenuContent align="end" forceMount className="w-[125px] p-2 rounded-lg" sideOffset={10}>
                 <DropdownMenuGroup>
                     {
                         languages.map((lang, index) => (

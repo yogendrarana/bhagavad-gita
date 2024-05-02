@@ -1,8 +1,12 @@
 import * as React from "react"
+import { Check } from "lucide-react";
+
+// data and store
 import { GITA_DATA } from "@/data/gita-data"
 import { useGitaStore } from "@/state/useGitaStore";
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
 
+// components
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
 
 export default function SelectChapter() {
     const { selectGitaChapter, currentGitaChapter } = useGitaStore();
@@ -23,7 +27,12 @@ export default function SelectChapter() {
                             <DropdownMenuItem
                                 key={index}
                                 onClick={() => selectGitaChapter(chp)}
-                            >Chapter {chp}</DropdownMenuItem>
+                            >
+                                {currentGitaChapter.chapter === chp ?
+                                    <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
+                                }
+                                <span>Chapter {chp}</span>
+                            </DropdownMenuItem>
                         ))
                     }
                 </DropdownMenuGroup>
