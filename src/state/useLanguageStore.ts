@@ -1,25 +1,31 @@
 import { create } from 'zustand';
 import { LANGUAGE } from '@/app/constants';
 import { persist } from 'zustand/middleware';
+import { LangType, languages } from '@/config/languages';
 
 type LanguageStateType = {
-    language: LANGUAGE
+    activeLanguage: LangType
 }
 
 type LanguageActionType = {
-    setLanguage: (language: LANGUAGE) => void;
+    setActiveLanguage: (lang: LangType) => void;
 }
 
 const initialState = {
-    language: LANGUAGE.ENGLISH
-}
+    activeLanguage: languages.find(l => l.name === localStorage.getItem("language") as LANGUAGE) ?? languages[0]
+};
+
 
 export const useLanguageStore = create<LanguageStateType & LanguageActionType>()(
     persist(
         (set, get) => ({
+            // states
             ...initialState,
-            setLanguage: (language: LANGUAGE) => {
-                set({ language });
+
+            // actions
+            setActiveLanguage: (lang: LangType) => {
+                set({ activeLanguage: lang });
+                localStorage.setItem("language", lang.name);
             }
         }),
         {

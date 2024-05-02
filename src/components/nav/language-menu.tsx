@@ -1,17 +1,17 @@
 import { Flag, Dot, ChevronDown } from "lucide-react"
-import { 
-    DropdownMenu, 
-    DropdownMenuContent, 
-    DropdownMenuGroup, 
-    DropdownMenuItem, 
-    DropdownMenuTrigger 
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuGroup,
+    DropdownMenuItem,
+    DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
 import { languages } from "@/config/languages"
-import useLanguage from "@/hooks/useLanguage";
+import { useLanguageStore } from "@/state/useLanguageStore";
 
 export function LanguageDropdownMenu() {
-    const { activeLanguage, changeActiveLanguage } = useLanguage();
+    const { activeLanguage, setActiveLanguage } = useLanguageStore();
 
     return (
         <DropdownMenu>
@@ -28,7 +28,7 @@ export function LanguageDropdownMenu() {
                         languages.map((lang, index) => (
                             <DropdownMenuItem
                                 key={index}
-                                onClick={() => changeActiveLanguage(lang)}
+                                onClick={() => setActiveLanguage(lang)}
                                 className="flex items-center gap-2 cursor-pointer"
                             >
                                 <Dot className={cn("h-2 w-2 rounded-full", activeLanguage?.name === lang.name ? "bg-black" : "bg-gray-200")} />
