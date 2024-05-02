@@ -1,8 +1,8 @@
 import React from 'react'
-import Logo from '@/components/util/logo'
 import { Button } from '../ui/button'
+import Logo from '@/components/util/logo'
 import { ProfileDropdownMenu } from './nav-dropdown-menu'
-import { LanguageDropdownMenu } from './language-menu'
+import { SelectLanguage } from '../select/select-language'
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
       <Logo />
       <div className='ml-auto flex gap-2'>
         <Button variant="secondary" className='h-[var(--h-button)] w-24 rounded-full'>Donate</Button>
-        <LanguageDropdownMenu />
+        <SelectLanguage />
         <ProfileDropdownMenu />
       </div>
     </div>

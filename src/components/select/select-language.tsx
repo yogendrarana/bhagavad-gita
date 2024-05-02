@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils"
 import { languages } from "@/config/languages"
 import { useLanguageStore } from "@/state/useLanguageStore";
 
-export function LanguageDropdownMenu() {
+export function SelectLanguage() {
     const { activeLanguage, setActiveLanguage } = useLanguageStore();
 
     return (
@@ -22,7 +22,7 @@ export function LanguageDropdownMenu() {
                 </button>
             </DropdownMenuTrigger>
 
-            <DropdownMenuContent align="end" forceMount className="w-auto p-4 rounded-xl" sideOffset={10}>
+            <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
                 <DropdownMenuGroup>
                     {
                         languages.map((lang, index) => (

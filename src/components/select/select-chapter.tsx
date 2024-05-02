@@ -1,44 +1,33 @@
 import * as React from "react"
-
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
-
 import { GITA_DATA } from "@/data/gita-data"
 import { useGitaStore } from "@/state/useGitaStore";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
 
 
 export default function SelectChapter() {
-    const { selectGitaChapter } = useGitaStore();
+    const { selectGitaChapter, currentGitaChapter } = useGitaStore();
     const chapters = GITA_DATA.map(chapter => chapter.chapter)
 
-    const handleChange = (value: string) => {
-        const chapter = parseInt(value)
-        selectGitaChapter(chapter)
-    }
-
     return (
-        <Select onValueChange={handleChange}>
-            <SelectTrigger className="w-[125px]">
-                <SelectValue placeholder={"Chapters"} />
-            </SelectTrigger>
-            <SelectContent className="w-[125px]">
-                <SelectGroup>
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <button className="h-[var(--h-button)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
+                    <span>Chapter</span>
+                    <div className="w-4">{currentGitaChapter.chapter}</div>
+                </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
+                <DropdownMenuGroup>
                     {
                         chapters.map((chp, index) => (
-                            <SelectItem
+                            <DropdownMenuItem
                                 key={index}
-                                value={String(chp)}
-                            >Chapter {chp}</SelectItem>
+                                onClick={() => selectGitaChapter(chp)}
+                            >Chapter {chp}</DropdownMenuItem>
                         ))
                     }
-                </SelectGroup>
-            </SelectContent>
-        </Select>
+                </DropdownMenuGroup>
+            </DropdownMenuContent>
+        </DropdownMenu>
     )
 }

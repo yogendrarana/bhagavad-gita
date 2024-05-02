@@ -1,41 +1,32 @@
 import * as React from "react"
-
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select"
 import { useGitaStore } from "@/state/useGitaStore";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
+
 
 export default function SelectVerse() {
-    const { currentGitaChapter, selectGitaVerse } = useGitaStore()
+    const { currentGitaChapter, selectGitaVerse, currentGitaVerse } = useGitaStore()
     const verses = currentGitaChapter.verses.map(verse => verse.verse)
 
-    const handleVerseChange = (value: string) => {
-        const verse = parseInt(value)
-        selectGitaVerse(verse)
-    }
-
     return (
-        <Select onValueChange={handleVerseChange}>
-            <SelectTrigger className="w-[125px]">
-                <SelectValue placeholder={"Verse"} />
-            </SelectTrigger>
-            <SelectContent className="w-[125px]">
-                <SelectGroup>
+        <DropdownMenu>
+            <DropdownMenuTrigger className="w-[125px]">
+                <button className="h-[var(--h-button)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
+                    <span>Verse</span>
+                    <div className="w-4">{currentGitaVerse.verse}</div>
+                </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
+                <DropdownMenuGroup>
                     {
                         verses.map((verse, index) => (
-                            <SelectItem
+                            <DropdownMenuItem
                                 key={index}
-                                value={String(verse)}
-                            >Verse {verse}</SelectItem>
+                                onClick={() => selectGitaVerse(verse)}
+                            >Verse {verse}</DropdownMenuItem>
                         ))
                     }
-                </SelectGroup>
-            </SelectContent>
-        </Select>
+                </DropdownMenuGroup>
+            </DropdownMenuContent>
+        </DropdownMenu>
     )
 }

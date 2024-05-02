@@ -9,7 +9,6 @@ import Controllers from '../util/controllers';
 import SelectVerse from '../select/select-verse';
 import SelectChapter from '../select/select-chapter';
 
-
 const Banner = () => {
   return (
     <div className='h-full'>
