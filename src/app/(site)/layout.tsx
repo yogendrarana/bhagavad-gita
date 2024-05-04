@@ -6,8 +6,8 @@ import "@/styles/globals.css";
 
 // metadata
 export const metadata: Metadata = {
-  title: "Bhagavad Gita",
-  description: "The Bhagavad Gita, often referred to as the Gita, is a 700-verse Hindu scripture that is part of the Indian epic Mahabharata.",
+  title: "Sanatan",
+  description: "Sanatan Dharma - Eternal Truth",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

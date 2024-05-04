@@ -23,17 +23,17 @@ type GitaActionType = {
 // initial state
 const initialState: GitaStateType = {
     currentGitaChapterNumber:
-        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber ?? 1,
+        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber || 1,
     currentGitaVerseNumber:
-        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaVerseNumber ?? 1,
+        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaVerseNumber || 1,
     currentGitaChapter:
         GITA_DATA.find((chap) =>
             chap.chapter === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber
-        ) ?? GITA_DATA[0],
+        ) || GITA_DATA[0],
     currentGitaVerse:
         GITA_DATA.find((chap) => chap.chapter === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber)?.verses.find((verse) =>
             verse.verse === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaVerseNumber
-        ) ?? GITA_DATA[0].verses[0]
+        ) || GITA_DATA[0].verses[0]
 };
 
 export const useGitaStore = create<GitaStateType & GitaActionType>()(

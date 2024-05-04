@@ -1,4 +1,4 @@
-import { LANGUAGE, LANGUAGE_CODE } from "@/app/constants";
+import { LANGUAGE, LANGUAGE_CODE } from "@/constants";
 
 export type LangType = {
     code: string;

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { LANGUAGE } from '@/app/constants';
+import { LANGUAGE } from '@/constants';
 import { persist } from 'zustand/middleware';
 import { LangType, languages } from '@/config/languages';
 
@@ -12,7 +12,7 @@ type LanguageActionType = {
 }
 
 const initialState = {
-    activeLanguage: languages.find(l => l.name === localStorage.getItem("language") as LANGUAGE) ?? languages[0]
+    activeLanguage: languages.find(l => l.name === localStorage.getItem("language") as LANGUAGE) || languages[0]
 };
 
 

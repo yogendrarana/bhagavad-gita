@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useGitaStore } from '@/state/useGitaStore';
-import { useLanguageStore } from '@/state/useLanguageStore';
+import { useGitaStore } from '@/store/useGitaStore';
+import { useLanguageStore } from '@/store/useLanguageStore';
 
 const Verse: React.FC = () => {
     const [verse, setVerse] = useState<string>('');

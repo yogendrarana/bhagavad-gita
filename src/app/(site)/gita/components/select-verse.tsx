@@ -2,36 +2,35 @@ import * as React from "react"
 import { Check } from "lucide-react";
 
 // data and store
-import { GITA_DATA } from "@/data/gita-data"
-import { useGitaStore } from "@/state/useGitaStore";
+import { useGitaStore } from "@/store/useGitaStore";
 
 // components
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../../../../components/ui/dropdown-menu";
 
-export default function SelectChapter() {
-    const { selectGitaChapter, currentGitaChapter } = useGitaStore();
-    const chapters = GITA_DATA.map(chapter => chapter.chapter)
+export default function SelectVerse() {
+    const { currentGitaChapter, selectGitaVerse, currentGitaVerse } = useGitaStore()
+    const verses = currentGitaChapter.verses.map(verse => verse.verse)
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger className="w-[125px]">
                 <button className="h-[var(--h-button)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
-                    <span>Chapter</span>
-                    <div className="w-4">{currentGitaChapter.chapter}</div>
+                    <span>Verse</span>
+                    <div className="w-4">{currentGitaVerse.verse}</div>
                 </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
                 <DropdownMenuGroup>
                     {
-                        chapters.map((chp, index) => (
+                        verses.map((verse, index) => (
                             <DropdownMenuItem
                                 key={index}
-                                onClick={() => selectGitaChapter(chp)}
+                                onClick={() => selectGitaVerse(verse)}
                             >
-                                {currentGitaChapter.chapter === chp ?
+                                {currentGitaVerse.verse === verse ?
                                     <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
                                 }
-                                <span>Chapter {chp}</span>
+                                <span>Verse {verse}</span>
                             </DropdownMenuItem>
                         ))
                     }

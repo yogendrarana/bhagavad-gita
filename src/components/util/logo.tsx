@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Logo = () => {
     return (
         <Link href={"/"}>
-            <p className='text-4 font-bold'>Bhagavad Gita</p>
+            <p className='text-4 font-bold'>Sanatan</p>
         </Link>
     )
 }

@@ -3,17 +3,14 @@
 import React from 'react'
 
 // components
-import Verse from '../gita/verse';
-import Navbar from '../nav/navbar';
-import Controllers from '../util/controllers';
-import SelectVerse from '../select/select-verse';
-import SelectChapter from '../select/select-chapter';
+import Verse from './verse';
+import Controllers from './controllers';
+import SelectVerse from './select-verse';
+import SelectChapter from './select-chapter';
 
-const Banner = () => {
+const GitaReader = () => {
   return (
     <div className='h-full'>
-      <Navbar />
-
       <div className='h-[calc(100vh-2*var(--h-nav))] flex flex-col border rounded-lg'>
 
         {/* header */}
@@ -38,4 +35,4 @@ const Banner = () => {
   )
 }
 
-export default Banner;
+export default GitaReader;

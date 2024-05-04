@@ -1,14 +1,16 @@
+"use client";
+
 import { cn } from "@/lib/utils"
 import { Dot, ChevronDown } from "lucide-react"
 
 // data and store
 import { languages } from "@/config/languages"
-import { useLanguageStore } from "@/state/useLanguageStore";
+import { useLanguageStore } from "@/store/useLanguageStore";
 
 // components
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
-export function SelectLanguage() {
+export default function LanguageMenu() {
     const { activeLanguage, setActiveLanguage } = useLanguageStore();
 
     return (

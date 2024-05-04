@@ -1,7 +1,7 @@
 import { FC, KeyboardEvent } from 'react'
-import { MotionButton } from '../ui/button'
+import { MotionButton } from '../../../../components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { useGitaStore } from '@/state/useGitaStore'
+import { useGitaStore } from '@/store/useGitaStore'
 
 const Controllers: FC = () => {
   const { nextGitaVerse, prevGitaVerse, prevGitaChapter, nextGitaChapter } = useGitaStore()

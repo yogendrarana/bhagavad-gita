@@ -1,3 +1,5 @@
+"use client";
+
 import {
     LogOut,
     Settings,
@@ -19,7 +21,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 
-export function ProfileDropdownMenu() {
+export default function UserMenu() {
 
     return (
         <DropdownMenu>
