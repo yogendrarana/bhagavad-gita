@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { cn } from '@/lib/utils'
 import {
     Card,
     CardContent,
@@ -11,13 +12,13 @@ import {
 import { BookType } from '@/data/books-data'
 
 interface BookCardProps {
-    book: BookType
+    book: BookType,
+    className?: string
 }
 
-
-const BookCard: React.FC<BookCardProps> = ({ book }) => {
+const BookCard: React.FC<BookCardProps> = ({ book, className }) => {
     return (
-        <Card className='cursor-pointer shadow-sm hover:shadow-md delay-100'>
+        <Card className={cn('cursor-pointer shadow-sm hover:shadow-md delay-100', className)}>
             <CardHeader>
                 <CardTitle>{book.title}</CardTitle>
             </CardHeader>

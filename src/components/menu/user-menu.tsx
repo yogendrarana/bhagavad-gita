@@ -26,7 +26,7 @@ export default function UserMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button className="size-[var(--h-button)] rounded-full grid place-items-center border">
+                <button className="size-[var(--h-btn)] sm:size-[var(--h-lg-btn)] rounded-full grid place-items-center border">
                     <Equal className="size-4 text-gray-500" />
                     {/* <Avatar>
                         <AvatarImage src="/avatars/01.png" alt="@shadcn" />
