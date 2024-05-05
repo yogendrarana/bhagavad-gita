@@ -4,7 +4,7 @@ import GitaReader from './components/gita-reader'
 
 const GitaPage = () => {
     return (
-        <div className="h-full flex flex-col gap-4">
+        <div className=" h-ful px-[var(--px)] sm:px-[var(--sm-px)] flex flex-col " >
             <div className="h-full px-[var(--px)] ">
                 <Navbar />
                 <GitaReader />

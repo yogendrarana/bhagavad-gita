@@ -15,7 +15,7 @@ export default function SelectChapter() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button className="h-[var(--h-button)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
+                <button className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
                     <span>Chapter</span>
                     <div className="w-4">{currentGitaChapter.chapter}</div>
                 </button>

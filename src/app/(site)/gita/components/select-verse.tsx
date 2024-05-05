@@ -14,7 +14,7 @@ export default function SelectVerse() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="w-[125px]">
-                <button className="h-[var(--h-button)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
+                <button className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-[125px] px-4 rounded-lg flex justify-center gap-2 items-center border">
                     <span>Verse</span>
                     <div className="w-4">{currentGitaVerse.verse}</div>
                 </button>

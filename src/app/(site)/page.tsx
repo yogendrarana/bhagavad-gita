@@ -7,12 +7,7 @@ import BookCard from "@/components/custom/book-card";
 
 export default function Home() {
   return (
-    <div className="
-        h-ful 
-        px-[var(--px)] sm:px-[var(--sm-px)] 
-        flex flex-col
-      "
-    >
+    <div className=" h-ful px-[var(--px)] sm:px-[var(--sm-px)] flex flex-col " >
       <Navbar />
 
       <div className="h-[50vh] rounded-lg flex flex-col justify-center items-center">
