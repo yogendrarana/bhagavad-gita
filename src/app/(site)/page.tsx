@@ -19,7 +19,7 @@ export default function Home() {
         {BOOKS.map((book, index) => (<BookCard key={index} book={book} />))}
       </div>
 
-      <div className="border-t">
+      <div className="py-8">
         <Footer />
       </div>
     </div>
