@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="px-[var(--px)] sm:px-[var(--sm-px)]">
         <Toaster />
         <main className="h-full">
           {children}
