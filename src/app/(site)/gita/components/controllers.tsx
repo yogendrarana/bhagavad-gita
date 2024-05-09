@@ -25,13 +25,6 @@ const Controllers: FC = () => {
         <ChevronLeft size={18} />
       </ControllerButton>
 
-      {/* <ControllerButton
-        size="icon"
-        className='h-[var(--h-lg-btn)] w-[var(--h-lg-btn)] rounded-full'
-      >
-        <i className="fa-solid fa-play"></i>
-      </ControllerButton> */}
-
       <ControllerButton
         size="icon"
         onClick={() => nextGitaVerse()}

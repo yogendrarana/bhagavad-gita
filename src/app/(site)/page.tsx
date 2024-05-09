@@ -8,7 +8,7 @@ import BookCard from "@/components/custom/book-card";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-[var(--px)] sm:pb-[var(--px-sm)] md:pb-[var(--px-md)] lg:pb-[var(--px-lg)] ">
       <Navbar />
       
       <Banner />
@@ -17,7 +17,7 @@ export default function HomePage() {
         {BOOKS.map((book, index) => (<BookCard key={index} book={book} />))}
       </div>
 
-      <div className="mt-4 mb-[var(--px)] sm:mb-[var(--sm-px)] md:mb-[var(--md-px)] lg:mb-[var(--lg-px)] rounded-lg">
+      <div className="mt-4 rounded-lg">
         <Footer />
       </div>
     </div>
