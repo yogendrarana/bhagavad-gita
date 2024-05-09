@@ -1,11 +1,13 @@
+"use client";
+
 import { FC } from 'react'
+import ControllerButton from './control-button'
 import { useGitaStore } from '@/store/useGitaStore'
 import { ChevronLeft, ChevronRight, PlayIcon } from 'lucide-react'
-import { MotionButton } from '../../../../components/ui/button'
-import ControllerButton from './control-button'
 
 const Controllers: FC = () => {
-  const { nextGitaVerse, prevGitaVerse, prevGitaChapter, nextGitaChapter } = useGitaStore()
+  const { nextGitaVerse, prevGitaVerse, prevGitaChapter, nextGitaChapter } = useGitaStore();
+
   return (
     <div className='flex gap-1'>
       <ControllerButton

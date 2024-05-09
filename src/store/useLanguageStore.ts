@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { LANGUAGE } from '@/constants';
 import { LangType, languages } from '@/config/languages';
-import { persist, PersistStorage } from 'zustand/middleware';
+import { createJSONStorage, persist, PersistStorage } from 'zustand/middleware';
 
 type LanguageStateType = {
     activeLanguage: LangType
@@ -25,12 +25,12 @@ export const useLanguageStore = create<LanguageStateType & LanguageActionType>()
             // actions
             setActiveLanguage: (lang: LangType) => {
                 set({ activeLanguage: lang });
-                localStorage.setItem("language", lang.name);
+                localStorage.setItem("gita_store", JSON.stringify({ state: { activeLanguage: lang }, }));
             }
         }),
         {
             name: 'language',
-            storage: localStorage as unknown as PersistStorage<LanguageStateType & LanguageActionType>,
+            storage: createJSONStorage(() => localStorage)
         }
     )
 )
