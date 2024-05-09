@@ -13,9 +13,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="px-[var(--px)] sm:px-[var(--sm-px)]">
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+      </head>
+      <body>
         <Toaster />
-        <main className="h-full">
+        <main className="h-full px-[var(--px)] sm:px-[var(--px-sm)] md:px-[var(--px-md)] lg:px-[var(--px-lg)]">
           {children}
         </main>
       </body>

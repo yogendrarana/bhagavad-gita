@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Logo from '@/components/util/logo'
 import UserMenu from '@/components/menu/user-menu'
-import LanguageMenu from '@/components/menu/language-menu'
+import LanguageMenu from '../menu/language-menu'
 
 const Navbar = () => {
   return (

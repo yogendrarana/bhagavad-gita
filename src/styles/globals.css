@@ -20,12 +20,12 @@ button {
 :root {
   /* height */
   --h-nav: 80px;
-  --h-btn: 30px;
+  --h-btn: 35px;
   --h-lg-btn: 40px;
 
-  /* padding */
+  /* padding x*/
   --px: 10px;
-  --sm-px: 50px;
-  --md-px: 100px;
-  --lg-px: 150px;
+  --px-sm: 20px;
+  --px-md: 50px;
+  --px-lg: 80px;
 }

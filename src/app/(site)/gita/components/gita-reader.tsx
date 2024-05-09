@@ -10,26 +10,21 @@ import SelectChapter from './select-chapter';
 
 const GitaReader = () => {
   return (
-    <div className='h-full'>
-      <div className='h-[calc(100vh-2*var(--h-nav))] flex flex-col border rounded-lg'>
+    <div className='h-full p-4 flex flex-col border rounded-lg'>
+      {/* header */}
+      <div className='ml-auto flex gap-2'>
+        <SelectChapter />
+        <SelectVerse />
+      </div>
 
-        {/* header */}
-        <div className='p-4 flex'>
-          <div className='ml-auto flex gap-2'>
-            <SelectChapter />
-            <SelectVerse />
-          </div>
-        </div>
+      {/* verse */}
+      <div className='flex flex-1 justify-center items-center text-center'>
+        <Verse />
+      </div>
 
-        {/* main body */}
-        <div className='p-10 flex flex-1 justify-center items-center text-center'>
-          <Verse />
-        </div>
-
-        {/* footer */}
-        <div className='p-4 flex justify-center items-center'>
-          <Controllers />
-        </div>
+      {/* footer */}
+      <div className='flex justify-center items-center'>
+        <Controllers />
       </div>
     </div>
   )

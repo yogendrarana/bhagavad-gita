@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react'
-import { redirect } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation'
 
@@ -10,8 +9,8 @@ import { useRouter } from 'next/navigation'
 interface PropType {
     href: string;
     label: string;
-    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
     className?: string;
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
 }
 
 const RedirectButton: React.FC<PropType> = ({ variant, href, label, className }) => {

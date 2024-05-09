@@ -13,7 +13,7 @@ interface BookCardProps {
 const BookCard: React.FC<BookCardProps> = ({ book, className }) => {
 
     return (
-        <Card className={cn('p-8 flex flex-col gap-4 cursor-pointer shadow-sm hover:shadow-md delay-100', className)}>
+        <Card className={cn('p-8 flex flex-col gap-4 cursor-pointer shadow-sm hover:shadow-md', className)}>
             <CardTitle>{book.title}</CardTitle>
             <CardDescription>{book.description}</CardDescription>
             <div className='mt-auto flex gap-2 items-center'>

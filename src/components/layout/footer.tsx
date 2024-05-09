@@ -7,36 +7,23 @@ import { Button } from '../ui/button';
 
 const Footer = () => {
   return (
-    <div className='p-10 flex flex-col gap-4 border rounded-lg'>
-      <div className='w-full flex justify-between items-center '>
-        <div className='flex flex-col gap-4'>
-          <Logo />
-          <div className='flex gap-4'>
-            {BOOKS.map((book, index) => (
-              <div key={index} className='hover:text-gray-500'>
-                <Link href={book.other.href}>{book.title}</Link>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className='ml-auto space-y-2'>
-          <p>Join our newsletter</p>
-          <div className="flex w-full max-w-sm items-center space-x-2">
-            <Input type="email" placeholder="enter your email" />
-            <Button type="submit">Subscribe</Button>
-          </div>
+    <div className='w-full p-10 border rounded-lg space-y-8 lg:flex lg:gap-10 lg:space-y-0'>
+      <div className='w-full flex flex-col gap-2'>
+        <Logo />
+        <div className='flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:gap-4'>
+          {BOOKS.map((book, index) => (
+            <div key={index} className='hover:text-gray-500'>
+              <Link href={book.other.href}>{book.title}</Link>
+            </div>
+          ))}
         </div>
       </div>
 
-      <hr />
-
-      <div className='flex justify-between items-center'>
-        <div>@2024, All rights reserved</div>
-        <div className='flex gap-4'>
-          <p>Terms</p>
-          <p>Privacy</p>
-          <p>Cookies</p>
+      <div className='w-full space-y-2 lg:w-[500px]'>
+        <p className='font-bold'>Join our newsletter</p>
+        <div className="w-full flex flex-col gap-2 items-center lg:flex-row">
+          <Input type="email" className='w-full' placeholder="enter your email" />
+          <Button type="submit" className='w-full lg:w-[150px]'>Subscribe</Button>
         </div>
       </div>
     </div>

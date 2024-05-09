@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { LANGUAGE } from '@/constants';
-import { persist } from 'zustand/middleware';
 import { LangType, languages } from '@/config/languages';
+import { persist, PersistStorage } from 'zustand/middleware';
 
 type LanguageStateType = {
     activeLanguage: LangType
@@ -30,7 +30,7 @@ export const useLanguageStore = create<LanguageStateType & LanguageActionType>()
         }),
         {
             name: 'language',
-            getStorage: () => localStorage,
+            storage: localStorage as unknown as PersistStorage<LanguageStateType & LanguageActionType>,
         }
     )
 )
