@@ -7,7 +7,8 @@ import { Check } from "lucide-react";
 import { useGitaStore } from "@/store/useGitaStore";
 
 // components
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "../../../../components/ui/dropdown-menu";
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 
 export default function SelectVerse() {
     const { currentGitaChapter, selectGitaVerse, currentGitaVerse } = useGitaStore()
@@ -19,22 +20,25 @@ export default function SelectVerse() {
                 <span>Verse</span>
                 <div className="">{currentGitaVerse.verse}</div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
-                <DropdownMenuGroup>
-                    {
-                        verses.map((verse, index) => (
-                            <DropdownMenuItem
-                                key={index}
-                                onClick={() => selectGitaVerse(verse)}
-                            >
-                                {currentGitaVerse.verse === verse ?
-                                    <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
-                                }
-                                <span>Verse {verse}</span>
-                            </DropdownMenuItem>
-                        ))
-                    }
-                </DropdownMenuGroup>
+            <DropdownMenuContent align="end" forceMount className="p-0" sideOffset={10}>
+                    <DropdownMenuGroup>
+                    <ScrollArea className="h-[300px] w-[125px] rounded-md">
+
+                        {
+                            verses.map((verse, index) => (
+                                <DropdownMenuItem
+                                    key={index}
+                                    onClick={() => selectGitaVerse(verse)}
+                                >
+                                    {currentGitaVerse.verse === verse ?
+                                        <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
+                                    }
+                                    <span>Verse {verse}</span>
+                                </DropdownMenuItem>
+                            ))
+                        }
+                </ScrollArea>
+                    </DropdownMenuGroup>
             </DropdownMenuContent>
         </DropdownMenu>
     )

@@ -58,6 +58,60 @@ export const GITA_DATA: GitaDataType = [
                     sanskrit: "भीमश्चा भीमसेनोऽर्जुनश्चैव विक्रान्तः | युधिष्ठिरस्य च सूनुजौ नासात्यौ च महाहवा ॥ ४ ||",
                 },
             },
+            {
+                "verse": 5,
+                "text": {
+                    "english": "Dhrishtaketu, Chekitana, and the valiant king of Kashi, Purujit, Kuntibhoja, and Shaibya, the best among men,",
+                    "nepali": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान् | पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ||",
+                    "hindi": "धृष्टकेतु, चेकितान, और काशी के वीर राजा, पुरुजित, कुंतिभोज, और शैब्य - सब मनुष्यों में श्रेष्ठ हैं।",
+                    "sanskrit": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान् | पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ||"
+                }
+            },
+            {
+                "verse": 6,
+                "text": {
+                    "english": "Yudhamanyu, the brave Uttamaujas, the son of Subhadra, and the sons of Draupadi, all of whom are great warriors.",
+                    "nepali": "युधामन्युश्च वीर्यवान् सौभद्रो द्रौपदेयाश्च महारथाः |",
+                    "hindi": "युधामन्यु, वीर उत्तमौजास, सुभद्रा के पुत्र, और द्रौपदी के पुत्र - जो सभी महान योद्धा हैं।",
+                    "sanskrit": "युधामन्युश्च वीर्यवान् सौभद्रो द्रौपदेयाश्च महारथाः |"
+                }
+            },
+            {
+                "verse": 7,
+                "text": {
+                    "english": "O best of the brahmanas, know also the distinguished heroes who are especially qualified to lead my army, who are ever victorious in battle.",
+                    "nepali": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन | अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ||",
+                    "hindi": "ओ ब्राह्मणों के श्रेष्ठ, मेरी सेना का नेतृत्व करने के लिए विशेष रूप से योग्य महान योद्धाओं को भी जानो, जो युद्ध में हमेशा विजयी होते हैं।",
+                    "sanskrit": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन | अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ||"
+                }
+            },
+            {
+                "verse": 8,
+                "text": {
+                    "english": "There are personalities like yourself, Bhisma, Karna, Kripa, Ashvatthama, Vikarna, and the son of Somadatta, who are always victorious in battle.",
+                    "nepali": "भीष्मद्रोणप्रमुखतः सर्वेषामपि पाण्डवानाम् | अचार्यः पितरौ पुत्रास्तथैव च पितामहाः ||",
+                    "hindi": "आपकी तरह, भीष्म, कर्ण, कृपा, अश्वत्थामा, विकर्ण, और सोमदत्त के पुत्र - जो सभी युद्ध में हमेशा विजयी होते हैं।",
+                    "sanskrit": "भीष्मद्रोणप्रमुखतः सर्वेषामपि पाण्डवानाम् | अचार्यः पितरौ पुत्रास्तथैव च पितामहाः ||"
+                }
+            },
+            {
+                "verse": 9,
+                "text": {
+                    "english": "There are many other heroes who are prepared to lay down their lives for my sake. All of them are well equipped with different kinds of weapons, and all are experienced in military science.",
+                    "nepali": "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान् | कृपया परयाविष्टो विषीदन्तमिदं वचः ||",
+                    "hindi": "अपने लिए अपनी जान देने के लिए तैयार कई और वीर हैं। उन सभी के पास विभिन्न प्रकार के शस्त्र हैं, और सभी युद्ध विज्ञान में अनुभवी हैं।",
+                    "sanskrit": "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान् | कृपया परयाविष्टो विषीदन्तमिदं वचः ||"
+                }
+            },
+            {
+                "verse": 10,
+                "text": {
+                    "english": "Our strength is immeasurable, and we are perfectly protected by Grandfather Bhisma, whereas the strength of the Pandavas, carefully protected by Bhima, is limited.",
+                    "nepali": "न चैतद्विद्मः कतरन्नो गरीयो यद्वा जयेमहि | यानेव हत्वा न जिजीविषामस्त्रां प्रमुखाः स्त्रियः ||",
+                    "hindi": "हमारी शक्ति अपार है, और हम भीष्म पितामह द्वारा पूरी तरह से संरक्षित हैं, जबकि पाण्डवों की शक्ति, जो भीम द्वारा सावधानी से संरक्षित है, सीमित है।",
+                    "sanskrit": "न चैतद्विद्मः कतरन्नो गरीयो यद्वा जयेमहि | यानेव हत्वा न जिजीविषामस्त्रां प्रमुखाः स्त्रियः ||"
+                }
+            }
         ]
     },
 
