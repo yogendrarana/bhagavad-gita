@@ -1,18 +1,26 @@
 import bcrypt from "bcrypt";
 import mongoose, { Document, Schema } from "mongoose";
 
+// auth provider enum
+export enum AuthProviderEnum {
+    credentials = 'credentials',
+    google = 'google'
+}
+
 // user schema 
 export interface IUserModel extends Document {
     name: string;
     email: string;
     password: string;
+    authProvider?: AuthProviderEnum;
     isValidPassword: (password: string) => Promise<boolean>;
 }
 
 const userSchema: Schema = new Schema<IUserModel>({
     name: { type: String, required: true },
     email: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    authProvider: { type: String, required: true, enum: AuthProviderEnum }
 })
 
 // pre save hook to hash password
