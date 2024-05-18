@@ -1,10 +1,23 @@
+"use client";
+
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Banner = () => {
+    const banner_text = "One stop for all hindu religious books.";
     return (
-        <div className="h-[75vh] rounded-lg flex flex-col justify-center items-center">
-            <p className="text-center text-xl">One stop for all hindu religious books. </p>
-            <p className="text-center text-2xl">We have a collection of books on various topics like Ramayan, Mahabharat, Bhagwat Geeta, Vedas, Upanishads, Puranas, etc.</p>
+        <div className="h-[75vh] rounded-lg flex justify-center items-center gap-2">
+            {banner_text.split(" ").map((letter, index) => (
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="cursor-pointer text-4xl"
+                >
+                    {letter}
+                </motion.div>
+            ))}
         </div>
     )
 }
