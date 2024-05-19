@@ -27,6 +27,13 @@
   dependencies:
     "@auth/core" "0.31.0"
 
+"@auth/mongodb-adapter@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@auth/mongodb-adapter/-/mongodb-adapter-3.1.0.tgz#72cd32712c238ee7ba70f1bbc474e5fa0986501b"
+  integrity sha512-KRlxlZnx2BW4biHoKtLFWmEZYPb0230XYtlAejKIPHegoHoLRFWNNxmf8C2oKqmXtHJYnRUavfrXm3PsfY6c5w==
+  dependencies:
+    "@auth/core" "0.31.0"
+
 "@babel/runtime@^7.13.10", "@babel/runtime@^7.20.13", "@babel/runtime@^7.23.2", "@babel/runtime@^7.24.1":
   version "7.24.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.5.tgz#230946857c053a36ccc66e1dd03b17dd0c4ed02c"
@@ -681,29 +688,29 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.36.1.tgz#ae46f935c4752812a56c6815305061a3da82e7b8"
   integrity sha512-BteWYEPUcucEu3NBcDAgKuI4U25R9aPrHSP6YSf2NvaD2pSlIQTdqOfLRsxH9WdRYg7k0Uom35Uacb6nvbIMJg==
 
-"@tanstack/react-query@^5.32.1":
-  version "5.36.2"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.36.2.tgz#1b7dc4c2fa0e48912335f0a157dd942cfa269326"
-  integrity sha512-bHNa+5dead+j6SA8WVlEOPxcGfteVFgdyFTCFcxBgjnPf0fFpHUc7aNZBCnvmPXqy/BeQa9zTuU9ectb7i8ZXA==
+"@tanstack/react-query@^5.37.1":
+  version "5.37.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.37.1.tgz#82d79cdf54923b1f0638c080e8f0439a6a8a2ddc"
+  integrity sha512-EhtBNA8GL3XFeSx6VYUjXQ96n44xe3JGKZCzBINrCYlxbZP6UwBafv7ti4eSRWc2Fy+fybQre0w17gR6lMzULA==
   dependencies:
     "@tanstack/query-core" "5.36.1"
 
-"@trpc/client@^11.0.0-rc.364":
+"@trpc/client@^11.0.0-rc.373":
   version "11.0.0-rc.373"
   resolved "https://registry.yarnpkg.com/@trpc/client/-/client-11.0.0-rc.373.tgz#2bd00e5e9940d54e0b3a26786fb79200afc7c4dd"
   integrity sha512-DSKOFjpQycJjwLrJWCpMqfwuFCP99QUPBZBeCb94WTvZUb6wGzOZWQMdIj7EnsR9jgWHlPll1e0s7OgAWxBKqw==
 
-"@trpc/next@^11.0.0-rc.364":
+"@trpc/next@^11.0.0-rc.373":
   version "11.0.0-rc.373"
   resolved "https://registry.yarnpkg.com/@trpc/next/-/next-11.0.0-rc.373.tgz#406b73df30b4f33ab4ca2a6aba2ab4242f998904"
   integrity sha512-VCuV2qBlr0z5tFMExtNzY6zEtKMUSXCOxuC53u4IRePParFZ2uVpqx2yGqyHsgORThjn1xtjlX2klp5wEPt1YA==
 
-"@trpc/react-query@^11.0.0-rc.364":
+"@trpc/react-query@^11.0.0-rc.373":
   version "11.0.0-rc.373"
   resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-11.0.0-rc.373.tgz#67b8fe94eadf6b249c1a30b100641e56a6b13427"
   integrity sha512-yxHlSiuPkoCnEB0W9yzF5eSX6F09/JFsTpdrwyocTg0Z1TaAYkJ0pUVMP1Gb3bKZEou1x6a8ZJJEqKLZbLPXCA==
 
-"@trpc/server@^11.0.0-rc.364":
+"@trpc/server@^11.0.0-rc.373":
   version "11.0.0-rc.373"
   resolved "https://registry.yarnpkg.com/@trpc/server/-/server-11.0.0-rc.373.tgz#62cd41f0cda61a37c6616d26fe765de2a66ac648"
   integrity sha512-i5q1KkQ0fuHqYbEPWMfk2rTp31wde8RKo0jxWfwZU8YsnjaErZ8lFnGCxz252l7mMCqT70IKR6c/N5MEXqChDA==
@@ -2569,7 +2576,7 @@ mongodb-connection-string-url@^3.0.0:
     "@types/whatwg-url" "^11.0.2"
     whatwg-url "^13.0.0"
 
-mongodb@6.6.2, mongodb@^6.6.0:
+mongodb@6.6.2, mongodb@^6.6.2:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.6.2.tgz#7ecdd788e9162f6c5726cef40bdd2813cc01e56c"
   integrity sha512-ZF9Ugo2JCG/GfR7DEb4ypfyJJyiKbg5qBYKRintebj8+DNS33CyGMkWbrS9lara+u+h+yEOGSRiLhFO/g1s1aw==
@@ -3828,7 +3835,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zod@^3.23.6:
+zod@^3.23.8:
   version "3.23.8"
   resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
   integrity sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==
