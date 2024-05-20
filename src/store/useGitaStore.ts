@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from "zustand/middleware";
 import { ChapterType, GITA_DATA, VerseType } from '@/data/gita-data';
+import * as gitaHelper from '@/helpers/gita.helper';
 
 // gita state type
 type GitaStateType = {
@@ -22,18 +23,10 @@ type GitaActionType = {
 
 // initial state
 const initialState: GitaStateType = {
-    currentGitaChapterNumber:
-        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber || 1,
-    currentGitaVerseNumber:
-        JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaVerseNumber || 1,
-    currentGitaChapter:
-        GITA_DATA.find((chap) =>
-            chap.chapter === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber
-        ) || GITA_DATA[0],
-    currentGitaVerse:
-        GITA_DATA.find((chap) => chap.chapter === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber)?.verses.find((verse) =>
-            verse.verse === JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaVerseNumber
-        ) || GITA_DATA[0].verses[0]
+    currentGitaChapterNumber: gitaHelper.getCurrentGitaChapterNumber(),
+    currentGitaVerseNumber: gitaHelper.getCurrentGitaVerseNumber(),
+    currentGitaChapter: gitaHelper.getCurrentGitaChapter(),
+    currentGitaVerse: gitaHelper.getCurrentGitaVerse()
 };
 
 export const useGitaStore = create<GitaStateType & GitaActionType>()(

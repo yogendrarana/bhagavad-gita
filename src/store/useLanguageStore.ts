@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 import { LANGUAGE } from '@/constants';
 import { LangType, languages } from '@/config/languages';
-import { createJSONStorage, persist, PersistStorage } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
+import * as langHelper from '@/helpers/language.helper';
 
 type LanguageStateType = {
     activeLanguage: LangType
@@ -12,7 +13,7 @@ type LanguageActionType = {
 }
 
 const initialState = {
-    activeLanguage: languages.find(l => l.name === localStorage.getItem("language") as LANGUAGE) || languages[0]
+    activeLanguage: langHelper.getActiveLanguage()
 };
 
 
