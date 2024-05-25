@@ -4,9 +4,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const Banner = () => {
-    const banner_text = "One stop for all hindu religious books.";
+    const banner_text = "One stop for HINDU religious books.";
     return (
-        <div className="h-[75vh] rounded-lg flex justify-center items-center gap-2">
+        <div className="h-[75vh] rounded-lg flex flex-col md:flex-row justify-center items-center gap-2">
             {banner_text.split(" ").map((letter, index) => (
                 <motion.div
                     key={index}
