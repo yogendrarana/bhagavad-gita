@@ -23,93 +23,48 @@ export const GITA_DATA: GitaDataType = [
         chapter: 1,
         verses: [
             {
-                verse: 1,
-                text: {
-                    english: "Dhritarashtra said: O Sanjaya, after my sons and the sons of Pandu assembled in the place of pilgrimage at Kurukshetra, desiring to fight, what did they do?",
-                    nepali: "धृतराष्ट्र बोले – हे संजय, धर्मक्षेत्र कुरुक्षेत्रमा भेा जम्मा भएर लड्न तयार भएका थिए । मेरा छोराहरू र पाण्डवहरूले के गरे ? ॥ १ ॥",
-                    hindi: "धृतराष्ट्र बोले - हे संजय! धर्मक्षेत्र कुरुक्षेत्र में जहाँ सेनाएँ संग्रहीत थीं और युद्ध के लिए उत्सुक थीं, मेरे पुत्रों और पाण्डवों ने क्या किया? ॥ १ ॥",
-                    sanskrit: "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय || १ ||",
-                },
+                "verse": 1,
+                "text": {
+                    "english": "Dhritarashtra said: \"O Sanjay, after gathering on the holy field of Kurukshetra, and desiring to fight, what did my sons and the sons of Pandu do?\"",
+                    "nepali": "धृतराष्ट्र बोले - \"हे सञ्जय, धर्मभूमि कुरुक्षेत्रमा युद्धको इच्छाले भेला भएका मेरा पुत्र र पाण्डुपुत्रहरूले के गरे?\" ॥ १ ॥",
+                    "hindi": "धृतराष्ट्र बोले - \"हे सञ्जय, धर्मभूमि कुरुक्षेत्र में युद्ध की इच्छा से इकट्ठे हुए मेरेे और पाण्डु के पुत्रों ने भी क्या किया?\" ॥ १ ॥",
+                    "sanskrit": "\"धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः । मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय\" || १ ||"
+                }
             },
             {
-                verse: 2,
-                text: {
-                    english: "Sanjaya said: O King! Duryodhana, having beheld the Pandava army drawn up in battle array, approached his teacher Drona and spoke these words:",
-                    nepali: "संजय भन्छन् – हे राजा ! दुर्योधनले पाण्डवहरूको फौज युद्धको लागि तयार भएको देखेर आफ्ना गुरु द्रोणाचार्यकहाँ गई यी शब्दहरू भने – ॥ २ ॥",
-                    hindi: "संजय बोले - हे राजन्! दुर्योधन ने पाण्डवों की सेना को युद्ध के लिए तैयार देखकर अपने गुरु द्रोणाचार्य के पास जाकर ये वचन कहे - ॥ २ ॥",
-                    sanskrit: "संजय उवाच | दृष्ट्वा तु पाण्डवानांकां विष्‍णुक्रान्तमवस्थिताः | उवाच भरतश्रेष्ठः स्नेहसंरूढमीदृशम् || २ ||",
-                },
+                "verse": 2,
+                "text": {
+                    "english": "Sanjay said: \"On observing the Pandava army standing in military formation, King Duryodhan approached his teacher Dronacharya, and said the following words.\"",
+                    "nepali": "सञ्जय भन्छन् - \"हे राजा! दुर्योधनले पाण्डवहरूको फौज युद्धको लागि तयार भएको देखेर आफ्ना गुरु द्रोणाचार्यकहाँ गई यी शब्दहरू भने\" – ॥ २ ॥",
+                    "hindi": "सञ्जय बोले - \"हे राजन्! दुर्योधन ने पाण्डवों की सेना को युद्ध के लिए तैयार देखकर अपने गुरु द्रोणाचार्य के पास जाकर ये वचन कहे\" - ॥ २ ॥",
+                    "sanskrit": "सञ्जय उवाच | दृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा | आचार्यमुपसंगम्य राजा वचनमब्रवीत् || २ ||"
+                }
             },
             {
-                verse: 3,
-                text: {
-                    english: "'Behold, O master, the mighty army of the sons of Pandu, drawn up in battle formation by the wise son of Drupada, your disciple.'",
-                    nepali: "'हे गुरु ! हेर्नुहोस्, पाण्डवका छोराहरूको विशाल फौजलाई, जुन तपाईंका शिष्य धृष्टद्युम्नले युद्धको लागि मिलाएका छन् ।' ॥ ३ ॥",
-                    hindi: "'हे गुरु! देखिए, पाण्डवों की विशाल सेना को, जिसे आपके शिष्य धृष्टद्युम्न ने युद्ध के लिए सजाया है।' ॥ ३ ॥",
-                    sanskrit: "पश्येदं कौरवाणांकां महत्तीं चमूं समवेताम् | द्रोणाचार्यं ममाचार्यं महात्मानं च तं विद्धि || ३ ||",
-                },
+                "verse": 3,
+                "text": {
+                    "english": "\"Behold, O Teacher, this mighty army of the sons of Pandu, arranged in military formation by your disciple, the son of Drupada.\"",
+                    "nepali": "\"हे आचार्य ! पाण्डुपुत्रहरूको यस विशाल सेना हेर्नुहोस्, जसलाई तपाईंको शिष्य द्रुपद पुत्रले मिलाएको छ।\" – ॥ ३ ॥",
+                    "hindi": "\"हे आचार्य! पाण्डुपुत्रों की इस विशाल सेना को देखिए, जिसे आपके बुद्धिमान शिष्य द्रुपद पुत्र ने व्यूहित किया है।\" - ॥ ३ ॥",
+                    "sanskrit": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् | व्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता || ३ ||"
+                }
             },
             {
-                verse: 4,
-                text: {
-                    english: "'There are heroes, mighty archers, and experienced warriors. Bhimasena, Arjuna, the sons of Yudhishthira, and the valorous twins (Nakula and Sahadeva).'",
-                    nepali: "'त्यहाँ वीरहरू, बलिया धनुर्धारीहरू, र अनुभवी योद्धाहरू छन् । भीमसेन, अर्जुन, युधिष्ठिरका छोराहरू, र वीर जुम्ल्याहा दाजुभाइ (नकु र सहदेव) ।' ॥ ४ ॥",
-                    hindi: "'उनमें वीर, बलशाली धनुर्धारी और अनुभवी योद्धा हैं। भीमसेन, अर्जुन, युधिष्ठिर के पुत्र और शूरवीर जुड़वाँ भाई (नकुल और सहदेव)।' ॥ ४ ॥",
-                    sanskrit: "भीमश्चा भीमसेनोऽर्जुनश्चैव विक्रान्तः | युधिष्ठिरस्य च सूनुजौ नासात्यौ च महाहवा ॥ ४ ||",
-                },
+                "verse": 4,
+                "text": {
+                    "english": "\"Here in this army are many heroic bowmen equal in fighting to Bhima and Arjuna: great fighters like Yuyudhana, Virata, and Drupada.\"",
+                    "nepali": "\"यस सेनामा भीम र अर्जुनसँग समान युद्ध लड्न सक्ने धेरै वीर धनुर्धारीहरू छन्: युयुधान, विराट र द्रुपद जस्ता महान् योद्धाहरू।\" – ॥ ४ ॥",
+                    "hindi": "\"इस सेना में कई वीर धनुर्धारी हैं जो युद्ध में भीम और अर्जुन के बराबर हैं: जैसे युयुधान, विराट और द्रुपद।\" - ॥ ४ ॥",
+                    "sanskrit": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि | युयुधानो विराटश्च द्रुपदश्च महारथः || ४ ||"
+                }
             },
             {
                 "verse": 5,
                 "text": {
-                    "english": "Dhrishtaketu, Chekitana, and the valiant king of Kashi, Purujit, Kuntibhoja, and Shaibya, the best among men,",
-                    "nepali": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान् | पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ||",
-                    "hindi": "धृष्टकेतु, चेकितान, और काशी के वीर राजा, पुरुजित, कुंतिभोज, और शैब्य - सब मनुष्यों में श्रेष्ठ हैं।",
-                    "sanskrit": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान् | पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः ||"
-                }
-            },
-            {
-                "verse": 6,
-                "text": {
-                    "english": "Yudhamanyu, the brave Uttamaujas, the son of Subhadra, and the sons of Draupadi, all of whom are great warriors.",
-                    "nepali": "युधामन्युश्च वीर्यवान् सौभद्रो द्रौपदेयाश्च महारथाः |",
-                    "hindi": "युधामन्यु, वीर उत्तमौजास, सुभद्रा के पुत्र, और द्रौपदी के पुत्र - जो सभी महान योद्धा हैं।",
-                    "sanskrit": "युधामन्युश्च वीर्यवान् सौभद्रो द्रौपदेयाश्च महारथाः |"
-                }
-            },
-            {
-                "verse": 7,
-                "text": {
-                    "english": "O best of the brahmanas, know also the distinguished heroes who are especially qualified to lead my army, who are ever victorious in battle.",
-                    "nepali": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन | अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ||",
-                    "hindi": "ओ ब्राह्मणों के श्रेष्ठ, मेरी सेना का नेतृत्व करने के लिए विशेष रूप से योग्य महान योद्धाओं को भी जानो, जो युद्ध में हमेशा विजयी होते हैं।",
-                    "sanskrit": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन | अपि त्रैलोक्यराज्यस्य हेतोः किं नु महीकृते ||"
-                }
-            },
-            {
-                "verse": 8,
-                "text": {
-                    "english": "There are personalities like yourself, Bhisma, Karna, Kripa, Ashvatthama, Vikarna, and the son of Somadatta, who are always victorious in battle.",
-                    "nepali": "भीष्मद्रोणप्रमुखतः सर्वेषामपि पाण्डवानाम् | अचार्यः पितरौ पुत्रास्तथैव च पितामहाः ||",
-                    "hindi": "आपकी तरह, भीष्म, कर्ण, कृपा, अश्वत्थामा, विकर्ण, और सोमदत्त के पुत्र - जो सभी युद्ध में हमेशा विजयी होते हैं।",
-                    "sanskrit": "भीष्मद्रोणप्रमुखतः सर्वेषामपि पाण्डवानाम् | अचार्यः पितरौ पुत्रास्तथैव च पितामहाः ||"
-                }
-            },
-            {
-                "verse": 9,
-                "text": {
-                    "english": "There are many other heroes who are prepared to lay down their lives for my sake. All of them are well equipped with different kinds of weapons, and all are experienced in military science.",
-                    "nepali": "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान् | कृपया परयाविष्टो विषीदन्तमिदं वचः ||",
-                    "hindi": "अपने लिए अपनी जान देने के लिए तैयार कई और वीर हैं। उन सभी के पास विभिन्न प्रकार के शस्त्र हैं, और सभी युद्ध विज्ञान में अनुभवी हैं।",
-                    "sanskrit": "तान्समीक्ष्य स कौन्तेयः सर्वान्बन्धूनवस्थितान् | कृपया परयाविष्टो विषीदन्तमिदं वचः ||"
-                }
-            },
-            {
-                "verse": 10,
-                "text": {
-                    "english": "Our strength is immeasurable, and we are perfectly protected by Grandfather Bhisma, whereas the strength of the Pandavas, carefully protected by Bhima, is limited.",
-                    "nepali": "न चैतद्विद्मः कतरन्नो गरीयो यद्वा जयेमहि | यानेव हत्वा न जिजीविषामस्त्रां प्रमुखाः स्त्रियः ||",
-                    "hindi": "हमारी शक्ति अपार है, और हम भीष्म पितामह द्वारा पूरी तरह से संरक्षित हैं, जबकि पाण्डवों की शक्ति, जो भीम द्वारा सावधानी से संरक्षित है, सीमित है।",
-                    "sanskrit": "न चैतद्विद्मः कतरन्नो गरीयो यद्वा जयेमहि | यानेव हत्वा न जिजीविषामस्त्रां प्रमुखाः स्त्रियः ||"
+                    "english": "\"Dhrishtaketu, Chekitana, the valiant king of Kasi, Purujit, Kuntibhoja, and Saibya—the best of men.\"",
+                    "nepali": "\"धृष्टकेतु, चेकितान, कासीका वीर राजा, पुरुजित, कुन्तिभोज र सैब्य – सबैभन्दा श्रेष्ठ मानिसहरू।\" – ॥ ५ ॥",
+                    "hindi": "\"धृष्टकेतु, चेकितान, कासी के वीर राजा, पुरुजित, कुन्तिभोज और सैब्य - सबसे श्रेष्ठ पुरुष।\" - ॥ ५ ॥",
+                    "sanskrit": "धृष्टकेतुश्चेकितानः काशिराजश्च वीर्यवान्। पुरुजित्कुन्तिभोजश्च शैब्यश्च नरपुङ्गवः || ५ ||"
                 }
             }
         ]
@@ -123,9 +78,9 @@ export const GITA_DATA: GitaDataType = [
                 verse: 1,
                 text: {
                     english: "Sanjaya continued: Having spoken thus to Drona, the king Duryodhana went to Bhishma, the son of Shantanu, and addressed him humbly:",
-                    nepali: "संजय भन्छन् – यसरी द्रोणाचार्यलाई भनेपछि राजा दुर्योधन शान्तनुका छोरा भीष्मकहाँ गए र विनम्रतापूर्वक यी शब्दहरू भने – ॥ १ ॥",
-                    hindi: "संजय बोले - इस प्रकार द्रोणाचार्य से कहकर राजा दुर्योधन शान्तनु के पुत्र भीष्म के पास गया और विनम्रतापूर्वक ये वचन बोला - ॥ १ ॥",
-                    sanskrit: "संजय उवाच | तं तथा कृपया युक्तं दृष्ट्वा धर्मस्य तत्पराम् | सञ्जय उवाच | उवाच भरतश्रेष्ठः स्नेहसंरूढमीदृशम् || १ ||",
+                    nepali: "सञ्जय भन्छन् – यसरी द्रोणाचार्यलाई भनेपछि राजा दुर्योधन शान्तनुका छोरा भीष्मकहाँ गए र विनम्रतापूर्वक यी शब्दहरू भने – ॥ १ ॥",
+                    hindi: "सञ्जय बोले - इस प्रकार द्रोणाचार्य से कहकर राजा दुर्योधन शान्तनु के पुत्र भीष्म के पास गया और विनम्रतापूर्वक ये वचन बोला - ॥ १ ॥",
+                    sanskrit: "सञ्जय उवाच | तं तथा कृपया युक्तं दृष्ट्वा धर्मस्य तत्पराम् | सञ्जय उवाच | उवाच भरतश्रेष्ठः स्नेहसंरूढमीदृशम् || १ ||",
                 },
             },
             {
