@@ -10,11 +10,6 @@ const Navbar = () => {
     <div className='h-[var(--h-nav)] flex items-center'>
       <Logo />
       <div className='ml-auto flex items-center gap-2'>
-        <div className='flex gap-4 mr-2'>
-          <Link href='/' className='hover:font-bold'>home.</Link>
-          <Link href='/about' className='hover:font-bold'>about.</Link>
-          <Link href='/contact' className='hover:font-bold'>contact.</Link>
-        </div>
         <Button variant="secondary" className='h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-24 rounded-full'>Donate</Button>
         <LanguageMenu />
         <UserMenu />
