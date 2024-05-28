@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { Button } from '../ui/button'
 import Logo from '@/components/util/logo'
 import LanguageMenu from '../menu/language-menu'
