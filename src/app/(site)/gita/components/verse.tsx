@@ -10,9 +10,20 @@ const Verse: React.FC = () => {
     const { currentGitaVerse, currentGitaChapter } = useGitaStore();
 
     useEffect(() => {
-        const lang = JSON.parse(localStorage.getItem('language') || '');
-        setVerse(currentGitaVerse.text[lang?.state?.activeLanguage.name as 'english' | 'nepali' | 'hindi' | 'sanskrit']);
-    }, [currentGitaChapter, currentGitaVerse, activeLanguage])
+        try {
+            const storedLang = localStorage.getItem('language');
+            if (storedLang) {
+                const lang = JSON.parse(storedLang);
+                if (lang && lang.state && lang.state.activeLanguage && lang.state.activeLanguage.name) {
+                    setVerse(currentGitaVerse.text[lang.state.activeLanguage.name as 'english' | 'nepali' | 'hindi' | 'sanskrit']);
+                    return;
+                }
+            }
+        } catch (error) {
+            console.error('Error parsing language from localStorage:', error);
+        }
+        setVerse(currentGitaVerse.text['english']);
+    }, [currentGitaChapter, currentGitaVerse, activeLanguage]);
 
     return (
         <div className='flex flex-col text-2xl font-medium'>
