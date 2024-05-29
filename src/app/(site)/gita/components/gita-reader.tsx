@@ -5,6 +5,7 @@ import Verse from './verse';
 import Controllers from './controllers';
 import SelectVerse from './select-verse';
 import SelectChapter from './select-chapter';
+import LanguageMenu from '@/components/menu/language-menu';
 
 const GitaReader = () => {
   return (
@@ -13,6 +14,7 @@ const GitaReader = () => {
       <div className='ml-auto flex gap-2'>
         <SelectChapter />
         <SelectVerse />
+        <LanguageMenu />
       </div>
 
       {/* verse */}
