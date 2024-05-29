@@ -6,8 +6,6 @@ import { useMediaQuery } from 'react-responsive'
 import { Brahma, Om, Shiva, Vishnu } from "@/assets/index"
 import { useEffect, useState } from "react";
 
-
-
 // orbiting-circles
 function OrbitingCircles({
     className,
@@ -67,8 +65,8 @@ function OrbitingCircles({
 
 // orbiting-circles-demo
 export default function OrbitingCirclesDemo() {
-    const [innerRadius, setInnerRadius] = useState(60);
-    const [outerRadius, setOuterRadius] = useState(100);
+    const [innerRadius, setInnerRadius] = useState(50);
+    const [outerRadius, setOuterRadius] = useState(150);
     const isSmallScreen = useMediaQuery({ query: '(max-width: 600px)' });
     const isMediumScreen = useMediaQuery({ query: '(min-width: 601px) and (max-width: 1024px)' });
     const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px)' });
