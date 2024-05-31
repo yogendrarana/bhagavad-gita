@@ -11,7 +11,7 @@ const Verse: React.FC = () => {
 
     useEffect(() => {
         try {
-            const storedLang = localStorage.getItem('language');
+            const storedLang = localStorage.getItem('language_store');
             if (storedLang) {
                 const lang = JSON.parse(storedLang);
                 if (lang && lang.state && lang.state.activeLanguage && lang.state.activeLanguage.name) {

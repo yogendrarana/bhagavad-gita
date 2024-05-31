@@ -11,7 +11,7 @@ const GitaReader = () => {
   return (
     <div className='h-full p-4 flex flex-col border rounded-lg'>
       {/* header */}
-      <div className='ml-auto flex gap-2'>
+      <div className='w-full justify-center ml-auto flex gap-2'>
         <SelectChapter />
         <SelectVerse />
         <LanguageMenu />

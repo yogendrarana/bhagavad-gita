@@ -2,7 +2,7 @@ import { languages } from "@/config/languages";
 
 export function getActiveLanguage() {
     if (typeof window !== 'undefined' && window.localStorage) {
-        const storedLanguage = localStorage.getItem("language");
+        const storedLanguage = localStorage.getItem("language_store");
         if (storedLanguage) {
             const language = languages.find(l => l.name === storedLanguage);
             if (language) {

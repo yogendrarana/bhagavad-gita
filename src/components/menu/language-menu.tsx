@@ -16,7 +16,7 @@ export default function LanguageMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-20 rounded-full flex justify-center gap-2 items-center border">
+                <button className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-20 rounded-md flex justify-center gap-4 items-center border">
                     <div className="w-4">{activeLanguage?.code || languages[0].code}</div>
                     <ChevronDown className="size-4 text-gray-500" />
                 </button>

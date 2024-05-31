@@ -16,7 +16,7 @@ export default function SelectChapter() {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] px-6 rounded-full flex justify-center gap-2 items-center border">
+            <DropdownMenuTrigger className="h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] px-6 rounded-md flex justify-center gap-2 items-center border">
                 <span>Chapter</span>
                 <div className="">{currentGitaChapter.chapter}</div>
             </DropdownMenuTrigger>

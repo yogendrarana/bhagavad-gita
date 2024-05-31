@@ -1,8 +1,7 @@
 import { create } from 'zustand';
-import { LANGUAGE } from '@/constants';
-import { LangType, languages } from '@/config/languages';
-import { createJSONStorage, persist } from 'zustand/middleware';
+import { LangType } from '@/config/languages';
 import * as langHelper from '@/helpers/language.helper';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 type LanguageStateType = {
     activeLanguage: LangType
@@ -26,11 +25,11 @@ export const useLanguageStore = create<LanguageStateType & LanguageActionType>()
             // actions
             setActiveLanguage: (lang: LangType) => {
                 set({ activeLanguage: lang });
-                localStorage.setItem("gita_store", JSON.stringify({ state: { activeLanguage: lang }, }));
+                localStorage.setItem("language_store", JSON.stringify({ state: { activeLanguage: lang }, }));
             }
         }),
         {
-            name: 'language',
+            name: 'language_store',
             storage: createJSONStorage(() => localStorage)
         }
     )
