@@ -1,24 +1,18 @@
-import { languages } from "@/config/languages";
 import { GITA_DATA } from "@/data/gita-data";
-
-export function getLanguageFromLocalStorage() {
-    if (typeof window !== 'undefined' && window.localStorage) {
-        const storedLanguage = localStorage.getItem("language");
-        if (storedLanguage) {
-            const language = languages.find(l => l.name === storedLanguage);
-            if (language) {
-                return language;
-            }
-        }
-    }
-    return languages[0];
-}
 
 export function getCurrentGitaChapterNumber () {
     if (typeof window !== 'undefined' && window.localStorage) {
-        return JSON.parse(localStorage.getItem("gita_store") as string)?.state?.currentGitaChapterNumber || 1;
+        const storedCurrentGitaChapterNumber = localStorage.getItem("gita_store");
+        if (storedCurrentGitaChapterNumber) {
+            return JSON.parse(storedCurrentGitaChapterNumber).state.currentGitaChapterNumber;
+        } else {
+            localStorage.setItem("gita_store", JSON.stringify({
+                state: { currentGitaChapterNumber: 1, currentGitaVerseNumber: 1 },
+                version: 0
+            }));
+            return 1;
+        }
     }
-    return 1;
 }
 
 export function getCurrentGitaVerseNumber () {

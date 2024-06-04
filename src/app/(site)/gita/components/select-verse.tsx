@@ -16,14 +16,13 @@ export default function SelectVerse() {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-[125px] px-6 rounded-md flex justify-center gap-2 items-center border">
+            <DropdownMenuTrigger className="h-[var(--h-btn)] sm:h-[var(--h-lg-btn)] w-[125px] px-6 rounded-lg flex justify-center gap-2 items-center border">
                 <span>Verse</span>
                 <div className="">{currentGitaVerse.verse}</div>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" forceMount className="p-0" sideOffset={10}>
-                    <DropdownMenuGroup>
+                <DropdownMenuGroup>
                     <ScrollArea className="h-[300px] w-[125px] rounded-md">
-
                         {
                             verses.map((verse, index) => (
                                 <DropdownMenuItem
@@ -37,8 +36,8 @@ export default function SelectVerse() {
                                 </DropdownMenuItem>
                             ))
                         }
-                </ScrollArea>
-                    </DropdownMenuGroup>
+                    </ScrollArea>
+                </DropdownMenuGroup>
             </DropdownMenuContent>
         </DropdownMenu>
     )

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { Check } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 // data and store
 import { GITA_DATA } from "@/data/gita-data"
@@ -16,25 +17,27 @@ export default function SelectChapter() {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] px-6 rounded-md flex justify-center gap-2 items-center border">
+            <DropdownMenuTrigger className="h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] px-6 rounded-lg flex justify-center gap-2 items-center border">
                 <span>Chapter</span>
                 <div className="">{currentGitaChapter.chapter}</div>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" forceMount className="w-[125px] rounded-lg" sideOffset={10}>
                 <DropdownMenuGroup>
-                    {
-                        chapters.map((chp, index) => (
-                            <DropdownMenuItem
-                                key={index}
-                                onClick={() => selectGitaChapter(chp)}
-                            >
-                                {currentGitaChapter.chapter === chp ?
-                                    <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
-                                }
-                                <span>Chapter {chp}</span>
-                            </DropdownMenuItem>
-                        ))
-                    }
+                    <ScrollArea className="max-h-[300px] w-[125px] rounded-md">
+                        {
+                            chapters.map((chp, index) => (
+                                <DropdownMenuItem
+                                    key={index}
+                                    onClick={() => selectGitaChapter(chp)}
+                                >
+                                    {currentGitaChapter.chapter === chp ?
+                                        <Check className="size-3.5 mr-2 " /> : <div className="size-4 mr-2"></div>
+                                    }
+                                    <span>Chapter {chp}</span>
+                                </DropdownMenuItem>
+                            ))
+                        }
+                    </ScrollArea>
                 </DropdownMenuGroup>
             </DropdownMenuContent>
         </DropdownMenu>

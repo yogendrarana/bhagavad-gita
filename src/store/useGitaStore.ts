@@ -1,7 +1,7 @@
 import { create } from 'zustand';
+import * as gitaHelper from '@/helpers/gita.helper';
 import { createJSONStorage, persist } from "zustand/middleware";
 import { ChapterType, GITA_DATA, VerseType } from '@/data/gita-data';
-import * as gitaHelper from '@/helpers/gita.helper';
 
 // gita state type
 type GitaStateType = {
@@ -23,8 +23,12 @@ type GitaActionType = {
 
 // initial state
 const initialState: GitaStateType = {
-    currentGitaChapterNumber: gitaHelper.getCurrentGitaChapterNumber(),
-    currentGitaVerseNumber: gitaHelper.getCurrentGitaVerseNumber(),
+    currentGitaChapterNumber: localStorage.getItem("gita_store")
+        ? JSON.parse(localStorage.getItem("gita_store") as string).state.currentGitaChapterNumber
+        : gitaHelper.getCurrentGitaChapterNumber,
+    currentGitaVerseNumber: localStorage.getItem("gita_store")
+        ? JSON.parse(localStorage.getItem("gita_store") as string).state.currentGitaVerseNumber
+        : gitaHelper.getCurrentGitaVerseNumber(),
     currentGitaChapter: gitaHelper.getCurrentGitaChapter(),
     currentGitaVerse: gitaHelper.getCurrentGitaVerse()
 };

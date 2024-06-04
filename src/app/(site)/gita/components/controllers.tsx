@@ -12,7 +12,7 @@ const Controllers: FC = () => {
     <div className='flex gap-1'>
       <ControllerButton
         onClick={() => prevGitaChapter()}
-        className='h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] rounded-full hidden sm:flex'
+        className='h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] rounded-lg hidden sm:flex'
       >
         Prev Chapter
       </ControllerButton>
@@ -20,7 +20,7 @@ const Controllers: FC = () => {
       <ControllerButton
         size="icon"
         onClick={() => prevGitaVerse()}
-        className='h-[var(--h-lg-btn)] w-[var(--h-lg-btn)] rounded-full'
+        className='h-[var(--h-lg-btn)] w-[var(--h-lg-btn)] rounded-lg'
       >
         <ChevronLeft size={18} />
       </ControllerButton>
@@ -28,14 +28,14 @@ const Controllers: FC = () => {
       <ControllerButton
         size="icon"
         onClick={() => nextGitaVerse()}
-        className=' h-[var(--h-lg-btn)] w-[var(--h-lg-btn)] rounded-full'
+        className=' h-[var(--h-lg-btn)] w-[var(--h-lg-btn)] rounded-lg'
       >
         <ChevronRight size={18} />
       </ControllerButton>
 
       <ControllerButton
         onClick={() => prevGitaChapter()}
-        className='h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] rounded-full hidden sm:flex'
+        className='h-[var(--h-btn)] w-[125px] sm:h-[var(--h-lg-btn)] rounded-lg hidden sm:flex'
       >
         Next Chapter
       </ControllerButton>
